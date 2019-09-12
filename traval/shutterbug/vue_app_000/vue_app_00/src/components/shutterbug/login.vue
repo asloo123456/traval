@@ -1,7 +1,7 @@
 <template>
   <div id="myLogin">
     <div class="titleBar">
-      <a class="titleBarIcon"><img src="../../assets/left.png"></a>
+      <a class="titleBarIcon"><img src="../../assets/small/left.png"></a>
       登录
       <a class="titleBarReg">注册</a>
     </div>
