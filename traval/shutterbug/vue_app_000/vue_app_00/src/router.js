@@ -7,6 +7,8 @@ import HelloContainer from "./components/HelloWorld.vue"
 //引入登入
 import login from "./components/shutterbug/login.vue"
 
+// 引入中间部分
+import Indexs from "./components/pat/Indexs.vue"
 Vue.use(Router)
 
 export default new Router({
@@ -15,5 +17,6 @@ export default new Router({
     {path:'/',component:HelloContainer},
 
     {path:'/login',component:login},
+    {path:'/Indexs',component:Indexs},
   ]
 })
