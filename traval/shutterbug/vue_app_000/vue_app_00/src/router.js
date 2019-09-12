@@ -6,6 +6,8 @@ import HelloContainer from "./components/HelloWorld.vue"
 
 //引入登入
 import login from "./components/shutterbug/login.vue"
+//底部
+import footer from "./components/footer/footer.vue"
 
 Vue.use(Router)
 
@@ -15,5 +17,7 @@ export default new Router({
     {path:'/',component:HelloContainer},
 
     {path:'/login',component:login},
+    //底部
+    {path:'/footer',component:footer},
   ]
 })
