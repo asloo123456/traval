@@ -7,7 +7,7 @@ import HelloContainer from "./components/HelloWorld.vue"
 //引入登入
 import login from "./components/shutterbug/login.vue"
 //中间
-import lndexs from "./components/lndexs/lndexs.vue"
+//import lndexs from "./components/indexs/lndexs.vue"
 //底部
 import footer from "./components/footer/footer.vue"
 
@@ -20,7 +20,7 @@ export default new Router({
 
     {path:'/login',component:login},
     //中间
-    {path:'/lndexs',component:lndexs},
+    //{path:'/lndexs',component:lndexs},
     //底部
     {path:'/footer',component:footer},
   ]
