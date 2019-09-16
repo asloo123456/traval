@@ -5,13 +5,13 @@
     </div>
 </template>
 <script>
-import Indexss from './Indexss.vue'
-export default {
-    data(){
-        return {}
-    },
-    // 注册子组件
-    components:{"indexss":Indexss},
+// import Indexss from './Indexss.vue'
+// export default {
+//     data(){
+//         return {}
+//     },
+//     // 注册子组件
+//     components:{"indexss":Indexss},
     
-}
+// }
 </script>

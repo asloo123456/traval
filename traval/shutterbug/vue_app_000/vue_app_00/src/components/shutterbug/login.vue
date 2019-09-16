@@ -1,9 +1,9 @@
 <template>
   <div id="myLogin">
     <div class="titleBar">
-      <a class="titleBarIcon"><img src="../../assets/small/left.png"></a>
+      <a class="titleBarIcon" href="javascript:;"><img src="../../assets/small/left.png"></a>
       登录
-      <a class="titleBarReg">注册</a>
+      <a class="titleBarReg" href="javascript:;">注册</a>
     </div>
     <div class="vw-main">
       <input class="myInput1"
@@ -11,30 +11,36 @@
         <input class="myInput2"
       placeholder="请输入您的密码" >
       <mt-button class="my_btn">登录</mt-button>
-      <div class=""></div>
+      <div class="bottom">
+        <span class="sign_line"></span>
+        <p></p>
+        <span class="sign_line"></span>
+      </div>
     </div> 
   </div>
 </template>
 <style lang="scss" scoped>
 // 登录的头部导航
 .titleBar{
-  height:0.8rem;
+  padding:0 0.27rem 0;
+  height:1rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
   background:#000;
   color:#fff;
   font-size:0.35rem;
-  // 头部左
+  // 头部右
   .titleBarReg{
     display:inline-block;
     padding-right:10px;
-    font-size:0.27rem;
+    color:#fff;
+    font-size:0.25rem;
+    text-decoration:none;//取消a标签下划线
   }
-  // 头部右
+  // 头部左
   .titleBarIcon img{
     height:0.55rem;width:0.5rem;
-    padding-left:10px;
   }  
 }
 //输入框公共样式部分
@@ -63,5 +69,13 @@
     margin-top:0.2rem;
     color:#fff;
   }
+}
+//底部图片区
+.sign_line {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    margin: 0 7px;
+    border-bottom: 1px solid #666;
 }
 </style>
