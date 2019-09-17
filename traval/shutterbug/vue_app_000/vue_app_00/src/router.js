@@ -12,6 +12,8 @@ import login from "./components/shutterbug/login.vue"
 //底部
 import footer from "./components/footer/footer.vue"
 
+// 引入中间部分
+import Indexs from "./components/pat/Indexs.vue"
 Vue.use(Router)
 
 export default new Router({
@@ -22,8 +24,9 @@ export default new Router({
     {path:'/login',component:login},
 
     //中间
+    {path:'/Indexs',component:Indexs},
     //{path:'/lndexs',component:lndexs},
     //底部
-    {path:'/footer',component:footer},
+    {path:'/footer',component:footer}, 
   ]
 })
