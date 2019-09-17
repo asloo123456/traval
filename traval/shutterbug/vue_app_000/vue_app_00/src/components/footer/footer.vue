@@ -1,19 +1,25 @@
 <template>
 	<div class="bottom">
+		<!-- 第一层 -->
 		<div class="footer_div1">
 			<div class="footer_div1_div">
 				<div class="footer_div1_div_div">
+					<!-- 左侧图片 -->
 					<div class="footer_div1_div_div_div1">
 						<img src="../../assets/aea226a9be6fddee.jpg" alt="">
 					</div>
+					<!-- 中间 -->
 					<div class="footer_div1_div_div_div2">
+						<!-- 图片 -->
 						<div class="footer_div1_div_div_div2_div1"></div>
+						<!-- 文本 -->
 						<div class="footer_div1_div_div_div2_div2">
 							<div class="footer_div1_div_div_div2_div2_div1"></div>
 							<div class="footer_div1_div_div_div2_div2_div2"></div>
 							<div class="footer_div1_div_div_div2_div2_div3"></div>
 						</div>
 					</div>
+					<!-- 右边 -->
 					<div class="footer_div1_div_div_div3">
 						<div class="footer_div1_div_div_div3_div1"></div>
 						<div class="footer_div1_div_div_div3_div2">
@@ -25,8 +31,11 @@
 				</div>
 			</div>
 		</div>
+		<!-- 第二层和第三层 -->
 		<div class="footer_div2">
+			<!-- 第二层 -->
 			<div class="footer_div2_div1">
+				<!-- 左边 -->
 				<div class="footer_div2_div1_div1" >
 					<div class="footer_div2_div1_div1_div2">
 						<img src="../../assets/new_fotomen_logo2(1).png" alt="">
@@ -40,6 +49,7 @@
 						<a href="#">了解更多</a>
 					</div>
 				</div>
+				<!-- 中间 -->
 				<div class="footer_div2_div1_div2">
 					<h5>标签</h5>
 					<div class="footer_div2_div1_div2_div">
@@ -90,18 +100,69 @@
 						<a href="#">#黑白</a>
 					</div>	
 				</div>
+				<!-- 右边 -->
 				<div class="footer_div2_div1_div3">
 					<h5>近期更新</h5>
 					<div class="footer_div2_div1_div3_div">
-
+						<ul>
+							<li>
+								<div>
+									<div>
+										<img src="../../assets/1.jpg" alt="">
+									</div>
+									<div>
+										<h5></h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div>
+										<img src="../../assets/2.jpg" alt="">
+									</div>
+									<div>
+										<h5></h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div>
+										<img src="../../assets/3.jpg" alt="">
+									</div>
+									<div>
+										<h5></h5>
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
+			<!-- 第三层 -->
 			<div class="footer_div2_div2">
+				<!-- 两端对齐 -->
 				<div class="footer_div2_div2_div">
+					<!-- 左边 -->
 					<div class="footer_div2_div2_div1">
 						<a href="#">FOTOMEN</a>
 					</div>
+					<!-- 右边 -->
 					<div class="footer_div2_div2_div2">
 						<ul class="footer_ul">
 							<li class="footer_ul_item">
@@ -116,6 +177,7 @@
 						</ul>
 					</div>
 				</div>
+				<!-- 左边对齐 -->
 				<div class="footer_div2_div2_div3">
 					Copyright © 2006~2019 FOTOMEN. All rights reserved.
 					<p class="footer_div2_div2_p1">
@@ -436,7 +498,7 @@ export default {
     text-transform: uppercase;
 	}
 	.footer_div2_div1_div1_div1>a:hover{
-
+		background: #161616;
 	}
 	a{
 		text-decoration: none;

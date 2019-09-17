@@ -21,13 +21,9 @@ export default new Router({
     {path:'/',component:HelloContainer},
 
     {path:'/login',component:login},
-<<<<<<< HEAD
-
-    {path:'/Indexs',component:Indexs},
-=======
     //中间
+    {path:'/Indexs',component:Indexs},
     //{path:'/lndexs',component:lndexs},
->>>>>>> 5aab782c08771bcd6c13261177ce3d1141c33345
     //底部
     {path:'/footer',component:footer}, 
   ]
