@@ -5,6 +5,7 @@ import router from './router'
 //1:引入第三方组件库 mint-ui
 //1.1 完成引入所有组件
 import MintUI from "mint-ui" 
+
 import rem from "./rem" 
 //1.2 单引入mint-ui样式文件
 import "mint-ui/lib/style.css"

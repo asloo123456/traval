@@ -29,7 +29,6 @@
   </div>
 </template>
 <script>
-import qs from 'qs'
 export default {
   data(){
     return {
@@ -82,47 +81,6 @@ methods:{
       this.msg="";
     })
   }
-    
-    /*login(){
-      axios.get(
-        "http://localhost:3000",
-        {
-          params:{
-            uname:this.uname,
-            upwd:this.upwd
-          }
-        }
-      ).then(result=>{
-        //服务端:
-          //res.write({code:1或0})
-        if(result.data.code==1){
-          alert("登录成功！");
-        }else{
-          alert("用户名或密码不正确!")
-        }
-        this.uname="";
-        this.upwd="";
-      })
-    }*/
-    // login(){
-    //   axios.post(
-    //     "http://localhost:3000",
-    //     Qs.stringify({
-    //       uname:this.uname,
-    //       upwd:this.upwd
-    //     })
-    //   ).then(result=>{
-    //     //服务端:
-    //       //res.write({code:1或0})
-    //     if(result.data.code==1){
-    //       alert("登录成功！");
-    //     }else{
-    //       alert("用户名或密码不正确!")
-    //     }
-    //     this.uname="";
-    //     this.upwd="";
-    //   })
-    // }
   }
 }
 </script>

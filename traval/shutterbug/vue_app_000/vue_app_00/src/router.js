@@ -6,6 +6,7 @@ import HelloContainer from "./components/HelloWorld.vue"
 
 //引入登入
 import login from "./components/shutterbug/login.vue"
+
 //中间
 //import lndexs from "./components/indexs/lndexs.vue"
 //底部
@@ -19,6 +20,7 @@ export default new Router({
     {path:'/',component:HelloContainer},
 
     {path:'/login',component:login},
+
     //中间
     //{path:'/lndexs',component:lndexs},
     //底部
