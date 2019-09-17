@@ -27,6 +27,12 @@ axios.defaults.baseURL="http://127.0.0.1:8080/"
 //1.8:注册
 Vue.prototype.axios = axios;
 
+//引入自定义指令foucs
+Vue.directive("focus",{
+  inserted(domElem){
+    domElem.focus(); //DOM中
+  }
+})
 
 //功能:使用vuex保存共享数据
 //1.9:引入第三方模块
