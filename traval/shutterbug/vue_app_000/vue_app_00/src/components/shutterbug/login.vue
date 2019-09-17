@@ -9,9 +9,9 @@
     <!-- 中间输入框 -->
     <div class="vw-main">
       <input class="myInput1" 
-      placeholder="请输入您的手机号" v-model="uname">
+      placeholder="请输入您的手机号" v-model="phone" v-focus @keydown.13="login">
         <input class="myInput2"
-      placeholder="请输入您的密码" v-model="upwd">
+      placeholder="请输入您的密码" v-model="upwd" @keydown.13="login">
       <button class="my_btn" @click="login">登录</button>
       <!--登入下方-->
       <div class="bottom">
@@ -24,30 +24,29 @@
        </div><!--   登入下方结束    -->
     </div><!--  输入框结束 -->
     <div class="inputShow">
-      <div class="my_push" :class="reg?'puShow':''" v-text="msg"></div>
+      <div class="my_push"  v-text="msg"></div>
     </div> <!-- 地步现实栏-->
   </div>
 </template>
 <script>
+import qs from 'qs'
 export default {
   data(){
     return {
-      uname:"",
+      phone:"",
       upwd:"",
-      reg:false,
       msg:"",//控制弹出的提示内容
     }
   },
 methods:{
   login(){
     // 获取账号密码
-    var u = this.uname;
+    var u = this.phone;
     var p = this.upwd;
     // 创建正则  验证手机号
     var reg=/^1[3,4,5,7,8,9]\d{9}$/;
     // 判断如何错误 用户名提示
       if(!reg.test(u)){
-        this.reg=true;
         this.msg="手机号格式不正确";
         return;
       }else{
@@ -56,13 +55,34 @@ methods:{
     //创建正则表达式  3~12位置 字母数字
       var reg1= /^[a-z0-9]{3,12}$/i;
       if(!reg1.test(p)){
-        this.reg=true;
         this.msg="请输入3-12位数字或字母";
         return;
       }else{
         this.reg=false;
       }
+      //使用ajax实现登录功能
+      this.axios.get(
+      "login",
+      {
+      params:{
+          phone:this.phone,
+          upwd:this.upwd
+        }
+      }
+    ).then(result=>{
+      //服务端:
+        //res.write({code:1或0})
+      if(result.data.code==1){
+        alert("登录成功！");//this.$router.push("/product")
+      }else{
+        alert("用户名或密码不正确!")
+      }
+      this.phone="";
+      this.upwd="";
+      this.msg="";
+    })
   }
+    
     /*login(){
       axios.get(
         "http://localhost:3000",
@@ -208,9 +228,14 @@ methods:{
       border-radius:5px;
     }
     //隐藏时的
-    .puShow{
-      display: none;
-    }
+    .fade{
+        height:0;
+        opacity:0;
+        overflow:hidden;
+        transition:all .2s linear;
+      }
   }
 }
+
+
 </style>

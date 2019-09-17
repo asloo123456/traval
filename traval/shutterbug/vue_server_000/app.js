@@ -37,10 +37,10 @@ server.use(express.static("public"));
 //功能一 登入
 server.get("/login",(req,res)=>{
   // 获取账号密码
-  var u = req.query.uname;
+  var u = req.query.phone;
   var p = req.query.upwd;
   // 创建sql
-  var sql="SELECT id FROM s_login WHERE uname = ? AND upwd = md5(?)";
+  var sql="SELECT id FROM s_login WHERE phone = ? AND upwd = md5(?)";
 
   pool.query(sql,[u,p],(err,result)=>{
     if(err)throw err;
