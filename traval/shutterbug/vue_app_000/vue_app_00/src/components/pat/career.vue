@@ -2,8 +2,8 @@
     <div class="post_comme">
         <ul>
           <h2>评论:</h2>
-           <li v-for="(task,i) of tasks">
-             {{task}}
+           <li v-for="(task,i) of tasks"  :key="i">
+            {{task}}
            </li>
         </ul>
         <h2>发表评论</h2>
@@ -14,7 +14,7 @@
           <textarea class="form_control" v-model="task"></textarea>
           </div>
           <div class="div_form" v-for="(item) of title">
-              <label style="display:block;" v-text="item.name"><span style="color:red">*</span></label>
+              <label style="display:block;" v-text="item"><span style="color:red">*</span></label>
               <input />
           </div>
           <!--div class="div_form">
@@ -26,7 +26,7 @@
               <input v-model="task" text="">
           </div-->
           <p class="conper">
-            <input  type="submit" value="发表评论" @click="sub">
+            <input  type="button" value="发表评论" @click="sub">
           </p>
         </form>
         <p class="pst">此站点使用Akismet来减少垃圾评论。<a style="display:block;">了解我们如何处理您的评论数据。</a></p>
@@ -35,18 +35,18 @@
 <script>
 export default {
     data(){
-        return {
-            task:"",
+        return {     
             title:[
-                {name:"名字"},{name:"电子邮箱"},{name:"网站"}
+                "名字","电子邮箱","网站"
             ],
-            tasks: ["本人热爱摄影 热爱艺术 不过是学语言专业的希望有机会加入做一些创意 根美术 艺术有关的工作","科研人员，业余爱好摄影二十年，对摄影有无上的热爱，单是不想放弃现在的科研共作，想问你们找兼职人员么？"]
+            tasks: ["本人热爱摄影 热爱艺术 不过是学语言专业的希望有机会加入做一些创意 根美术 艺术有关的工作","科研人员，业余爱好摄影二十年，对摄影有无上的热爱，单是不想放弃现在的科研共作，想问你们找兼职人员么？"],
+            task:"",
         }
     },
     methods: {
-        sub(){
-          this.task="";
-          this.tasks.push(this.task);
+        sub(){    
+        this.tasks.push(this.task);
+        this.task="";
         }
     },
 }
