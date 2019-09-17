@@ -3,14 +3,14 @@
     <div class="d1">
     <!--子组件-->
       <div id="d2">
-        <a><img src="../pat/img/sirui_20190531.gif" class="imgStyle"/></a>
+        <a><img src="../../assets/sirui_20190531.gif" class="imgStyle"/></a>
       </div>      
     </div>
     <!--楼一 热门推荐-->
     <div class="d1_1">
       <div class="d2_2">
         <h3 class="titles">热门推荐</h3>
-        <div class="imgf"><a href="#"><img src="../pat/img/toued.jpg"/></a></div>
+        <div class="imgf"><a href="#"><img src="../../assets/mcj02.jpg"/></a></div>
         <!--文字-->
         <div class="texts">
           <h2>4800万超广角三摄+全视屏华为畅享10 Plus“新实力派”强悍登场</h2>
@@ -38,13 +38,13 @@
     <div class="d1">
     <!--子-->
       <div id="d2">
-        <a><img src="../pat/img/getlz_banner_970x90.jpg" class="imgStyle"/></a>
+        <a><img src="../../assets/getlz_banner_970x90.jpg" class="imgStyle"/></a>
       </div>      
     </div>
     <!--楼二-->
     <div class="tow">
         <div class="tow_todo">
-            <a><img src="../pat/img/meizu20190530004-560x420.jpg" class="imgtow" /></a>
+            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
             <h2 class="text_tow">
               1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
             </h2>
@@ -60,7 +60,7 @@
     <!--楼层-->
     <div class="tow">
         <div class="tow_todo">
-            <a><img src="../pat/img/meizu20190530004-560x420.jpg" class="imgtow" /></a>
+            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
             <h2 class="text_tow">
               1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
             </h2>
@@ -75,7 +75,7 @@
     </div>
     <div class="tow">
         <div class="tow_todo">
-            <a><img src="../pat/img/meizu20190530004-560x420.jpg" class="imgtow" /></a>
+            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
             <h2 class="text_tow">
               1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
             </h2>
@@ -90,7 +90,7 @@
     </div>
     <div class="tow">
         <div class="tow_todo">
-            <a><img src="../pat/img/meizu20190530004-560x420.jpg" class="imgtow" /></a>
+            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
             <h2 class="text_tow">
               1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
             </h2>
@@ -179,7 +179,7 @@ export default {
             padding:0 .4rem;
             background:#111;
             flex-wrap:wrap;
-            // justify-content:center;
+            justify-content:center;
             opacity:0.9;
            .titles{width:100%;height:.3rem;font-size:.2rem;color:#fff;margin:.8rem 0 0px 0;text-align:center;};
           .imgf{
@@ -188,6 +188,7 @@ export default {
            a img{width:6.5rem;height:6.5rem;}
            };
            .texts{//bottom:10%;
+          //  display:flex;justify-content:center;
              h2{color:#ddd;margin:0;font-size:.5rem;}
            };
            .fonts{
