@@ -99,19 +99,36 @@
 			</div>
 			<div class="footer_div2_div2">
 				<div class="footer_div2_div2_div">
-					<a>FOTOMEN</a>
+					<div class="footer_div2_div2_div1">
+						<a href="#">FOTOMEN</a>
+					</div>
 					<div class="footer_div2_div2_div2">
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+						<ul class="footer_ul">
+							<li class="footer_ul_item">
+								<a href="#" class="footer_ul_font-size">关于我们</a>
+							</li>
+							<li class="footer_ul_item">
+								<a href="#" class="footer_ul_font-size">联系我们</a>
+							</li>
+							<li class="footer_ul_item">
+								<a href="#" class="footer_ul_font-size">工作机会</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="footer_div2_div2_div3">
 					Copyright © 2006~2019 FOTOMEN. All rights reserved.
-					<p></p>
-					<p></p>
+					<p class="footer_div2_div2_p1">
+						FOTOMEN.CN：
+						<a href="#">粤ICP备14005541号-1</a>
+						&nbsp;&nbsp;&nbsp;DCMAGCN.COM：
+						<a href="#">粤ICP备14005541号-3</a>
+					</p>
+					<p class="footer_div2_div2_p2">
+						友情链接：
+						<a href="#">米拍</a>&nbsp;
+						<a href="#">栗子摄影</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -123,10 +140,11 @@ export default {
 }
 </script>
 <style  lang="scss" scoped>
+
   .bottom{
 		margin: 0;
 		background: #111111;
-		font-family: Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace;
+		// font-family: Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace;
     font-size: 16px;
     font-weight: 400;
     font-style: normal; 
@@ -177,6 +195,19 @@ export default {
 			height: 28px;
 			margin: 0 0 16px;
 		}
+		.footer_div2_div2_div1>a{
+			font-size: 26px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 16px;
+		}
+		.footer_div2_div2_p1{
+			padding: 5px 0 0;
+			margin: 0 0 16px;
+		}
+		.footer_div2_div2_p2{
+			margin: 0 0 16px;
+		}
 	}
 	/*大屏幕下iframe的高度*/
 	@media (max-width: 1119px) and (min-width: 1020px) {
@@ -219,6 +250,19 @@ export default {
 		.footer_div2_div2_div1{
 			width: 137px;
 			height: 28px;
+			margin: 0 0 16px;
+		}
+		.footer_div2_div2_div1>a{
+			font-size: 26px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 16px;
+		}
+		.footer_div2_div2_p1{
+			padding: 5px 0 0;
+			margin: 0 0 16px;
+		}
+		.footer_div2_div2_p2{
 			margin: 0 0 16px;
 		}
 	}
@@ -269,6 +313,19 @@ export default {
 			height: 24px;
 			margin: 0 0 14px;
 		}
+		.footer_div2_div2_div1>a{
+			font-size: 23px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 14px;
+		}
+		.footer_div2_div2_p1{
+			padding: 5px 0 0;
+			margin: 0 0 14px;
+		}
+		.footer_div2_div2_p2{
+			margin: 0 0 14px;
+		}
 	}
 	/*小屏幕下iframe的高度*/
 	@media (max-width: 759px) {
@@ -306,6 +363,19 @@ export default {
 		.footer_div2_div2_div1{
 			width: 120px;
 			height: 24px;
+			margin: 0 0 14px;
+		}
+		.footer_div2_div2_div1>a{
+			font-size: 23px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 14px;
+		}
+		.footer_div2_div2_p1{
+			padding: 5px 0 0;
+			margin: 0 0 14px;
+		}
+		.footer_div2_div2_p2{
 			margin: 0 0 14px;
 		}
 	}
@@ -410,5 +480,54 @@ export default {
 	.footer_div2_div2_div1{
 		position: relative;
 		overflow: hidden;
+	}
+	.footer_div2_div2_div1>a{
+		font-weight: bolder;
+		color: #ffffff;
+		position: absolute;
+		top:-25%;
+		left:0;
+	}
+	.footer_div2_div2_div1>a:hover{
+		color: #a0a0a0;
+	}
+	.footer_ul{
+	  display: -webkit-box;
+	  display: flex;
+	  flex-wrap: wrap;
+		margin: 0;
+	  padding: 0;
+	  list-style: none;
+	}
+	.footer_ul_item::after {
+	  display: inline-block;
+	  content: " ";
+	}
+	.footer_ul_item+.footer_ul_item::before {
+	  display: inline-block;
+	  margin-left: 28px;
+	  content: " ";
+	}
+	.footer_ul_font-size{
+	  color: #fff;
+		font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: uppercas;
+	}
+	.footer_ul_font-size:hover{
+		color: #a0a0a0;
+	}
+	.footer_div2_div2_div3{
+		font-size: 10px;
+		line-height: 1;
+	}
+	.footer_div2_div2_p1>a,.footer_div2_div2_p2>a{
+		color: #fff;
+		display: inline-block;
+	}
+	.footer_div2_div2_p1>a:hover,.footer_div2_div2_p2>a:hover{
+		color: #a0a0a0;
 	}
 </style>
