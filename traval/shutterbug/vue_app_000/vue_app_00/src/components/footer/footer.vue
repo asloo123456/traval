@@ -93,25 +93,108 @@
 				<div class="footer_div2_div1_div3">
 					<h5>近期更新</h5>
 					<div class="footer_div2_div1_div3_div">
-
+						<div class="footer_ul_li1_div">
+							<div class="footer_ul_li1_div_div1">
+								<a href="#">
+									<img src="../../assets/1.png" alt="">
+								</a>
+							</div>
+							<div class="footer_ul_li1_div_div2">
+								<h5>
+									<a href="#">冠军激情点燃全场·China GT完美达成天津首秀！</a>
+								</h5>
+								<ul>
+									<li>
+										<p>发表于</p>
+									</li>
+									<li>
+										<a href="#">2019年9月12日</a>
+									</li>
+									<li>
+										<a href="#">无评论</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer_ul_li2_div">
+							<div class="footer_ul_li2_div_div1">
+								<a href="#">
+									<img src="../../assets/2.png" alt="">
+								</a>
+							</div>
+							<div class="footer_ul_li2_div_div2">
+								<h5>
+									<a href="#">China GT 天津站首回合，XTREME最后一分钟逆转夺冠</a>
+								</h5>
+								<ul>
+									<li>
+										<p>发表于</p>
+									</li>
+									<li>
+										<a href="#">2019年9月12日</a>
+									</li>
+									<li>
+										<a href="#">无评论</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer_ul_li3_div">
+							<div class="footer_ul_li3_div_div1">
+								<a href="#">
+									<img src="../../assets/3.png" alt="">
+								</a>
+							</div>
+							<div class="footer_ul_li3_div_div2">
+								<h5>
+									<a href="#">《国家地理》摄影大赛全球总冠军谈索尼Alpha 7R III</a>
+								</h5>
+								<ul>
+									<li>
+										<p>发表于</p>
+									</li>
+									<li>
+										<a href="#">2019年9月11日</a>
+									</li>
+									<li>
+										<a href="#">无评论</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="footer_div2_div2">
 				<div class="footer_div2_div2_div">
-					<a>FOTOMEN</a>
+					<a href="#" class="footer_div2_div2_div1">FOTOMEN</a>
 					<div class="footer_div2_div2_div2">
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li class="footer_ul_li-item">
+								<a href="#">关于我们</a>
+							</li>
+							<li class="footer_ul_li-item">
+								<a href="#">联系我们</a>
+							</li>
+							<li class="footer_ul_li-item">
+								<a href="#">工作机会</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="footer_div2_div2_div3">
 					Copyright © 2006~2019 FOTOMEN. All rights reserved.
-					<p></p>
-					<p></p>
+					<p>
+						FOTOMEN.CN：
+						<a href="#">粤ICP备14005541号-1</a>
+						&nbsp;&nbsp;&nbsp;DCMAGCN.COM：
+						<a href="#">粤ICP备14005541号-3</a>
+					</p>
+					<p>
+						友情链接：
+						<a href="#">米拍</a>&nbsp;
+						<a href="#">栗子摄影</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -123,10 +206,51 @@ export default {
 }
 </script>
 <style  lang="scss" scoped>
+
+	.footer_div2_div2_div1{
+		color: #fff;
+		font-size: 0.26rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -.0125em;
+    line-height: 1;
+    text-transform: none;
+	}
+	.footer_div2_div2_div2>ul{
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+	margin: 0;
+  padding: 0;
+  list-style: none;
+	}
+	.footer_ul_li-item+.footer_ul_li-item{
+  display: inline-block;
+  content: " ";
+	}
+	.footer_div2_div2_div2>ul>li>a{
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+	}
+	.footer_div2_div2_div3{
+		font-size: .1rem;
+    line-height: 1;
+	}
+	.footer_div2_div2_div3>p{
+		margin: 0;
+	}
+	.footer_div2_div2_div3>p>a{
+		color: #fff;
+	}
+	.footer_div2_div2_div1>a:hover,.footer_div2_div2_div3>p>a:hover,.footer_div2_div2_div2>ul>li>a:hover{
+		color: #a0a0a0;
+	}
+
   .bottom{
 		margin: 0;
 		background: #111111;
-		font-family: Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace;
+		// font-family: Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace;
     font-size: 16px;
     font-weight: 400;
     font-style: normal; 
@@ -173,9 +297,13 @@ export default {
 			justify-content:space-between;
 		}
 		.footer_div2_div2_div1{
-			width: 137px;
-			height: 28px;
 			margin: 0 0 16px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 16px;
+		}
+		.footer_ul_li-item+.footer_ul_li-item{
+  		margin: 0 0 0 32px;
 		}
 	}
 	/*大屏幕下iframe的高度*/
@@ -217,9 +345,13 @@ export default {
 			justify-content:space-between;
 		}
 		.footer_div2_div2_div1{
-			width: 137px;
-			height: 28px;
 			margin: 0 0 16px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 16px;
+		}
+		.footer_ul_li-item+.footer_ul_li-item{
+  		margin: 0 0 0 32px;
 		}
 	}
 	/*中屏幕下iframe的高度*/
@@ -265,9 +397,13 @@ export default {
 			justify-content:space-between;
 		}
 		.footer_div2_div2_div1{
-			width: 120px;
-			height: 24px;
 			margin: 0 0 14px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 14px;
+		}
+		.footer_ul_li-item+.footer_ul_li-item{
+  		margin: 0 0 0 28px;
 		}
 	}
 	/*小屏幕下iframe的高度*/
@@ -304,9 +440,13 @@ export default {
 			padding: 42px 0 0!important;
 		}
 		.footer_div2_div2_div1{
-			width: 120px;
-			height: 24px;
 			margin: 0 0 14px;
+		}
+		.footer_div2_div2_div2{
+			margin: 0 0 14px;
+		}
+		.footer_ul_li-item+.footer_ul_li-item{
+  		margin: 0 0 0 28px;
 		}
 	}
 	.footer_div1{
@@ -406,9 +546,5 @@ export default {
 	.footer_div2_div1_div1,.footer_div2_div1_div2,.footer_div2_div1_div3{
 		padding: 0 15px;
 		box-sizing: border-box;
-	}
-	.footer_div2_div2_div1{
-		position: relative;
-		overflow: hidden;
 	}
 </style>
