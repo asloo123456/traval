@@ -366,7 +366,7 @@ export default {
     text-transform: uppercase;
 	}
 	.footer_div2_div1_div1_div1>a:hover{
-
+		background: #232323;
 	}
 	a{
 		text-decoration: none;
