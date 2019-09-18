@@ -13,7 +13,12 @@ import footer from "./components/footer/footer.vue"
 // 引入中间部分
 import Indexss from "./components/pat/Indexss.vue"
 import career from "./components/pat/career.vue"
-
+//手风琴
+import souFen from "./components/souFen.vue"
+//购物车
+import shopping from "./components/shoppingCart/shopping.vue"
+//商品列表
+import product from  "./components/product/product.vue"
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -26,5 +31,12 @@ export default new Router({
     {path:'/career',component:career},
     //底部
     {path:'/footer',component:footer}, 
+	//手风琴
+    {path:'/souFen',component:souFen},
+    //购物车
+    {path:'/shopping',component:shopping},
+    //商品列表
+    {path:'/product',component:product},
+    
   ]
 })
