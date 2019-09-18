@@ -184,13 +184,13 @@
 				</div>
 				<div class="footer_div2_div2_div3">
 					Copyright © 2006~2019 FOTOMEN. All rights reserved.
-					<p>
+					<p class="footer_div2_div2_div3_p1">
 						FOTOMEN.CN：
 						<a href="#">粤ICP备14005541号-1</a>
 						&nbsp;&nbsp;&nbsp;DCMAGCN.COM：
 						<a href="#">粤ICP备14005541号-3</a>
 					</p>
-					<p>
+					<p class="footer_div2_div2_div3_p2">
 						友情链接：
 						<a href="#">米拍</a>&nbsp;
 						<a href="#">栗子摄影</a>
@@ -206,46 +206,6 @@ export default {
 }
 </script>
 <style  lang="scss" scoped>
-
-	.footer_div2_div2_div1{
-		color: #fff;
-		font-size: 0.26rem;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: -.0125em;
-    line-height: 1;
-    text-transform: none;
-	}
-	.footer_div2_div2_div2>ul{
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-	margin: 0;
-  padding: 0;
-  list-style: none;
-	}
-	.footer_ul_li-item+.footer_ul_li-item{
-  display: inline-block;
-  content: " ";
-	}
-	.footer_div2_div2_div2>ul>li>a{
-  color: #fff;
-  font-weight: bold;
-  font-size: 13px;
-	}
-	.footer_div2_div2_div3{
-		font-size: .1rem;
-    line-height: 1;
-	}
-	.footer_div2_div2_div3>p{
-		margin: 0;
-	}
-	.footer_div2_div2_div3>p>a{
-		color: #fff;
-	}
-	.footer_div2_div2_div1>a:hover,.footer_div2_div2_div3>p>a:hover,.footer_div2_div2_div2>ul>li>a:hover{
-		color: #a0a0a0;
-	}
 
   .bottom{
 		margin: 0;
@@ -305,6 +265,12 @@ export default {
 		.footer_ul_li-item+.footer_ul_li-item{
   		margin: 0 0 0 32px;
 		}
+		.footer_div2_div2_div3_p1{
+			margin: 5px 0 16px;
+		}
+		.footer_div2_div2_div3_p2{
+			margin: 0 0 16px;
+		}
 	}
 	/*大屏幕下iframe的高度*/
 	@media (max-width: 1119px) and (min-width: 1020px) {
@@ -352,6 +318,12 @@ export default {
 		}
 		.footer_ul_li-item+.footer_ul_li-item{
   		margin: 0 0 0 32px;
+		}
+		.footer_div2_div2_div3_p1{
+			margin: 5px 0 16px;
+		}
+		.footer_div2_div2_div3_p2{
+			margin: 0 0 16px;
 		}
 	}
 	/*中屏幕下iframe的高度*/
@@ -405,6 +377,12 @@ export default {
 		.footer_ul_li-item+.footer_ul_li-item{
   		margin: 0 0 0 28px;
 		}
+		.footer_div2_div2_div3_p1{
+			margin: 5px 0 14px;
+		}
+		.footer_div2_div2_div3_p2{
+			margin: 0 0 14px;
+		}
 	}
 	/*小屏幕下iframe的高度*/
 	@media (max-width: 759px) {
@@ -447,6 +425,12 @@ export default {
 		}
 		.footer_ul_li-item+.footer_ul_li-item{
   		margin: 0 0 0 28px;
+		}
+		.footer_div2_div2_div3_p1{
+			margin: 5px 0 14px;
+		}
+		.footer_div2_div2_div3_p2{
+			margin: 0 0 14px;
 		}
 	}
 	.footer_div1{
@@ -546,5 +530,41 @@ export default {
 	.footer_div2_div1_div1,.footer_div2_div1_div2,.footer_div2_div1_div3{
 		padding: 0 15px;
 		box-sizing: border-box;
+	}
+	.footer_div2_div2_div1{
+		color: #fff;
+		font-size: 0.26rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -.0125em;
+    line-height: 1;
+    text-transform: none;
+	}
+	.footer_div2_div2_div2>ul{
+  	display: -webkit-box;
+  	display: flex;
+  	flex-wrap: wrap;
+		margin: 0;
+  	padding: 0;
+  	list-style: none;
+	}
+	.footer_ul_li-item+.footer_ul_li-item{
+  	display: inline-block;
+  	content: " ";
+	}
+	.footer_div2_div2_div2>ul>li>a{
+  	color: #fff;
+  	font-weight: bold;
+  	font-size: 13px;
+	}
+	.footer_div2_div2_div3{
+		font-size: .1rem;
+    line-height: 1;
+	}
+	.footer_div2_div2_div3>p>a{
+		color: #fff;
+	}
+	.footer_div2_div2_div1>a:hover,.footer_div2_div2_div3>p>a:hover,.footer_div2_div2_div2>ul>li>a:hover,.footer_div2_div2_div1:hover{
+		color: #a0a0a0;
 	}
 </style>
