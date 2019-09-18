@@ -207,7 +207,8 @@ export default {
 </script>
 <style  lang="scss" scoped>
 	.footer_div2_div1_div3_div_div{
-
+		display: flex;
+		justify-content: space-between;
 	}
 	.footer_div2_div1_div3_div_div_div1{
 		width: 90px;
