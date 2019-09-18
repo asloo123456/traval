@@ -93,13 +93,13 @@
 				<div class="footer_div2_div1_div3">
 					<h5>近期更新</h5>
 					<div class="footer_div2_div1_div3_div">
-						<div class="footer_ul_li1_div">
-							<div class="footer_ul_li1_div_div1">
+						<div class="footer_div2_div1_div3_div_div">
+							<div class="footer_div2_div1_div3_div_div_div1">
 								<a href="#">
 									<img src="../../assets/1.png" alt="">
 								</a>
 							</div>
-							<div class="footer_ul_li1_div_div2">
+							<div class="footer_div2_div1_div3_div_div_div2">
 								<h5>
 									<a href="#">冠军激情点燃全场·China GT完美达成天津首秀！</a>
 								</h5>
@@ -116,13 +116,13 @@
 								</ul>
 							</div>
 						</div>
-						<div class="footer_ul_li2_div">
-							<div class="footer_ul_li2_div_div1">
+						<div class="footer_div2_div1_div3_div_div">
+							<div class="footer_div2_div1_div3_div_div_div1">
 								<a href="#">
 									<img src="../../assets/2.png" alt="">
 								</a>
 							</div>
-							<div class="footer_ul_li2_div_div2">
+							<div class="footer_div2_div1_div3_div_div_div2">
 								<h5>
 									<a href="#">China GT 天津站首回合，XTREME最后一分钟逆转夺冠</a>
 								</h5>
@@ -139,13 +139,13 @@
 								</ul>
 							</div>
 						</div>
-						<div class="footer_ul_li3_div">
-							<div class="footer_ul_li3_div_div1">
+						<div class="footer_div2_div1_div3_div_div">
+							<div class="footer_div2_div1_div3_div_div_div1">
 								<a href="#">
 									<img src="../../assets/3.png" alt="">
 								</a>
 							</div>
-							<div class="footer_ul_li3_div_div2">
+							<div class="footer_div2_div1_div3_div_div_div2">
 								<h5>
 									<a href="#">《国家地理》摄影大赛全球总冠军谈索尼Alpha 7R III</a>
 								</h5>
@@ -206,6 +206,20 @@ export default {
 }
 </script>
 <style  lang="scss" scoped>
+	.footer_div2_div1_div3_div_div{
+
+	}
+	.footer_div2_div1_div3_div_div_div1{
+		width: 90px;
+		height: 90px;
+	}
+	.footer_div2_div1_div3_div_div_div1>a>img{
+		width: 100%;
+		height: 100%;
+	}
+	.footer_div2_div1_div3_div_div_div2{
+
+	}
 
   .bottom{
 		margin: 0;
