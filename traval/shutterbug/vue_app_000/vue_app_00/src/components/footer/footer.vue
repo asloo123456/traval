@@ -219,7 +219,7 @@ export default {
 		height: 100%;
 	}
 	.footer_div2_div1_div3_div_div_div2{
-
+		display: inline;
 	}
 
   .bottom{
