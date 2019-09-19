@@ -31,19 +31,25 @@
         <ul>
           <h2>评论:</h2>
            <li v-for="(task,i) of tasks"  :key="i">
+           <div style="margin-bottom:.3rem" >
+             <img style="background:#fff;border-radius:50%;margin-right:.3rem" src="../../assets/ren.png"/>
+             <b :key="i" style="color:#fff;font:.25rem 'HanHei';height:.4rem;display:block">{{uname}}</b>
+             <p style="color:#595959;height:.4rem;position:relative;margin:0" >{{new Date(timer).toLocaleString()}}</p>
+           </div>
             {{task}}
            </li>
         </ul>
+        <!--/////-->
         <h2>发表评论</h2>
-        <p>电子邮件地址不会被公开。必须填项已用<span style="color:red">*</span>标注</p>
+        <p>电子邮件地址不会被公开。必须填项已用<span style="color:red;margin:0;font-size:.2rem">*</span>标注</p>
         <form>
           <div>
-          <label style="display:block">你的评论<span style="color:red">*</span></label>
-          <textarea class="form_control" v-model="task"></textarea>
+          <label style="display:block">你的评论<span style="color:red;font-size:.2rem">*</span></label>
+          <textarea class="form_control" v-model="task" ></textarea>
           </div>
-          <div class="div_form" v-for="(item) of title">
-              <label style="display:block;" v-text="item"><span style="color:red">*</span></label>
-              <input />
+          <div class="div_form" v-for="(item,index) of title" :key="index">
+              <label  v-text="item"></label><span style="color:red;font-size:.2rem">*</span><br>
+              <input v-model="list[index]" @keydown.13="sub" >
           </div>
           <!--div class="div_form">
               <label style="display:block;">电子邮箱<span style="color:red">*</span></label>
@@ -53,11 +59,11 @@
               <label style="display:block;">网站</label>
               <input v-model="task" text="">
           </div-->
-          <p class="conper">
+          <p class="conper"> 
             <input  type="button" value="发表评论" @click="sub">
           </p>
         </form>
-        <p class="pst">此站点使用Akismet来减少垃圾评论。<a style="display:block;">了解我们如何处理您的评论数据。</a></p>
+        <p class="pst">此站点使用Akismet来减少垃圾评论。<br><a style="color:#fff">了解我们如何处理您的评论数据。</a></p>
     </div>
 </template>
 <script>
@@ -69,13 +75,23 @@ export default {
             ],
             tasks: ["本人热爱摄影 热爱艺术 不过是学语言专业的希望有机会加入做一些创意 根美术 艺术有关的工作","科研人员，业余爱好摄影二十年，对摄影有无上的热爱，单是不想放弃现在的科研共作，想问你们找兼职人员么？"],
             task:"",
+            uname:"哎呦不错哦",
+            // timer:1566199863843,
+            timer:new Date().getTime(),
+            list:[]
         }
+        setInterval(function(){
+            timer:new Date().getTime()
+            })
+        
     },
     methods: {
         sub(){    
         this.tasks.push(this.task);
-        this.task="";
-        }
+        this.task=""; 
+        console.log(this.list);
+        },
+
     },
 }
 </script>
@@ -92,17 +108,20 @@ export default {
        h2{font-size:.3rem;color:#fff;margin:0 0 .5rem 0;}
        p{font-size:.2rem;color:#fff;margin:.3rem 0}
        label{font-size:.2rem;color:#595959}
-       .form_control{width:5rem;height:3rem;background:#232323;border:0;font-size:.3rem;margin-bottom:.1rem;color:#fff; }
+       .form_control{width:5rem;height:3rem;background:#232323;border:0;font-size:.3rem;margin-bottom:.1rem;     &:focus{background-color:#fff;}}
+       
        .div_form{
-           margin-bottom:.1rem;
+        //    margin-bottom:.1rem;
+        height:2rem;
            input{
-               width:5rem;height:.4rem;background:#232323;border:0;font-size:.3rem;color:#fff;
+               width:5rem;height:.4rem;background:#232323;border:0;font-size:.3rem;
                position:relative;
                bottom:0.3rem;
+               &:focus{background-color:#fff}
            }
        };
        .conper{
-           width:5rem;height:.4rem;margin:0;
+           width:5rem;height:.4rem;margin:.2rem 0 0 ;
            input{width:1.5rem;height:.4rem;text-align:center;background:#474747;border:0;color:#fff;}
            }
         .pst{font-size:0.3rem;color:#dbdbdb;margin-top:0}   
