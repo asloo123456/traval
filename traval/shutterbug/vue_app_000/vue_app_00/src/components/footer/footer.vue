@@ -103,17 +103,11 @@
 								<h5>
 									<a href="#">冠军激情点燃全场·China GT完美达成天津首秀！</a>
 								</h5>
-								<ul>
-									<li>
-										<p>发表于</p>
-									</li>
-									<li>
-										<a href="#">2019年9月12日</a>
-									</li>
-									<li>
-										<a href="#">无评论</a>
-									</li>
-								</ul>
+								<div class="footer_div2_div1_div3_div_div_div2_div">
+									<p>发表于</p>
+									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月12日</a>
+									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+								</div>
 							</div>
 						</div>
 						<div class="footer_div2_div1_div3_div_div">
@@ -126,17 +120,11 @@
 								<h5>
 									<a href="#">China GT 天津站首回合，XTREME最后一分钟逆转夺冠</a>
 								</h5>
-								<ul>
-									<li>
-										<p>发表于</p>
-									</li>
-									<li>
-										<a href="#">2019年9月12日</a>
-									</li>
-									<li>
-										<a href="#">无评论</a>
-									</li>
-								</ul>
+								<div class="footer_div2_div1_div3_div_div_div2_div">
+									<p>发表于</p>
+									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月12日</a>
+									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+								</div>
 							</div>
 						</div>
 						<div class="footer_div2_div1_div3_div_div">
@@ -149,17 +137,11 @@
 								<h5>
 									<a href="#">《国家地理》摄影大赛全球总冠军谈索尼Alpha 7R III</a>
 								</h5>
-								<ul>
-									<li>
-										<p>发表于</p>
-									</li>
-									<li>
-										<a href="#">2019年9月11日</a>
-									</li>
-									<li>
-										<a href="#">无评论</a>
-									</li>
-								</ul>
+								<div class="footer_div2_div1_div3_div_div_div2_div">
+									<p>发表于</p>
+									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月11日</a>
+									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -208,18 +190,30 @@ export default {
 <style  lang="scss" scoped>
 	.footer_div2_div1_div3_div_div{
 		display: flex;
-		justify-content: space-between;
+		// justify-content: space-between;
+		flex-flow: row nowrap;
 	}
 	.footer_div2_div1_div3_div_div_div1{
+		height: 90px;
+		padding: 0 15px 0 0;
+	}
+	.footer_div2_div1_div3_div_div_div1>a>img{
 		width: 90px;
 		height: 90px;
 	}
-	.footer_div2_div1_div3_div_div_div1>a>img{
-		width: 100%;
-		height: 100%;
-	}
 	.footer_div2_div1_div3_div_div_div2{
-		display: inline;
+  	display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer_div2_div1_div3_div_div_div2_div>p{
+		margin: 0;
+	}
+	.footer_div2_div1_div3_div_div_div2_div_a1{
+
+	}
+	.footer_div2_div1_div3_div_div_div2_div_a2{
+
 	}
 
   .bottom{
@@ -286,6 +280,13 @@ export default {
 		.footer_div2_div2_div3_p2{
 			margin: 0 0 16px;
 		}
+		.footer_div2_div1_div3_div_div+.footer_div2_div1_div3_div_div{
+			margin: 16px 0 0;
+		}
+		.footer_div2_div1_div3_div_div_div2>h5{
+			text-align: left;
+			margin: 0 0 8px !important;
+		}
 	}
 	/*大屏幕下iframe的高度*/
 	@media (max-width: 1119px) and (min-width: 1020px) {
@@ -339,6 +340,13 @@ export default {
 		}
 		.footer_div2_div2_div3_p2{
 			margin: 0 0 16px;
+		}
+		.footer_div2_div1_div3_div_div+.footer_div2_div1_div3_div_div{
+			margin: 16px 0 0;
+		}
+		.footer_div2_div1_div3_div_div_div2>h5{
+			text-align: left;
+			margin: 0 0 8px !important;
 		}
 	}
 	/*中屏幕下iframe的高度*/
@@ -398,6 +406,13 @@ export default {
 		.footer_div2_div2_div3_p2{
 			margin: 0 0 14px;
 		}
+		.footer_div2_div1_div3_div_div+.footer_div2_div1_div3_div_div{
+			margin: 14px 0 0;
+		}
+		.footer_div2_div1_div3_div_div_div2>h5{
+			text-align: left;
+			margin: 0 0 7px !important;
+		}
 	}
 	/*小屏幕下iframe的高度*/
 	@media (max-width: 759px) {
@@ -446,6 +461,13 @@ export default {
 		}
 		.footer_div2_div2_div3_p2{
 			margin: 0 0 14px;
+		}
+		.footer_div2_div1_div3_div_div+.footer_div2_div1_div3_div_div{
+			margin: 14px 0 0;
+		}
+		.footer_div2_div1_div3_div_div_div2>h5{
+			text-align: left;
+			margin: 0 0 7px !important;
 		}
 	}
 	.footer_div1{
@@ -508,6 +530,7 @@ export default {
 		background: #232323;
 	}
 	a{
+		color: #fff;
 		text-decoration: none;
 	}
 	h5{
