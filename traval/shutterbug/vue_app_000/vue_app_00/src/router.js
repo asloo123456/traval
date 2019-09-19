@@ -7,13 +7,27 @@ import HelloContainer from "./components/HelloWorld.vue"
 //引入登入
 import login from "./components/shutterbug/login.vue"
 
+//头部
+import top from "./components/top/top.vue"
 //底部
 import footer from "./components/footer/footer.vue"
 
 // 引入中间部分
 import Indexss from "./components/pat/Indexss.vue"
+// 搜索
+import Search from "./components/pat/Search.vue"
+import Search_icon from "./components/pat/Search_icon.vue"
+// 评论
 import career from "./components/pat/career.vue"
 
+<<<<<<< HEAD
+=======
+
+// import sc_Check from "./components/pat/sc_Check.vue"
+
+
+
+>>>>>>> 506cd0008aebfee3fddaeb5dc20e79fe8a7dd25d
 // import sc_Check from "./components/pat/sc_Check.vue"
 
 
@@ -24,6 +38,12 @@ import shopping from "./components/shoppingCart/shopping.vue"
 //商品列表
 import product from  "./components/product/product.vue"
 
+<<<<<<< HEAD
+=======
+// >>>>>>> f5473764dd936ab57cb99c98d4263f6c30487fc9
+
+
+>>>>>>> 506cd0008aebfee3fddaeb5dc20e79fe8a7dd25d
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -33,8 +53,14 @@ export default new Router({
     {path:'/login',component:login},
 // 中间
     {path:'/Indexss',component:Indexss},
+    // 搜索
+    {path:'/Search',component:Search},
+    {path:'/Search_icon',component:Search_icon},
+    // 评论
     {path:'/career',component:career},
     // {path:'/sc_Check',component:sc_Check},
+    //头部
+    {path:'/top',component:top}, 
     //底部
     {path:'/footer',component:footer}, 
 	//手风琴
