@@ -21,7 +21,7 @@ var server = express();
 server.listen(8080);
 //5:处理跨域 cors 
 server.use(cors({
-  origin:["http://127.0.0.1:5050","http://localhost:5050"],
+  origin:["http://127.0.0.1:5050","http://localhost:5050","http://127.0.0.1:5051"],
   credentials:true
 }))
 //6:配置session
@@ -49,7 +49,9 @@ server.get("/login",(req,res)=>{
       var id=result[0].id;
       // uid保存当前用户凭证
       req.session.uid=id;
+      console.log(req.session.uid);
       res.send({code:1,msg:"登入成功"});
+      
     }else{
       res.send({code:0,msg:"登入失败"});
     }
@@ -74,7 +76,7 @@ server.get("/product",(req,res)=>{
         pno=1;
       }
       if(!ps){
-       ps=4;
+       ps=25;
       }
   
       // 4：创建sql语句

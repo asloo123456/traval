@@ -42,64 +42,18 @@
       </div>      
     </div>
     <!--楼二-->
-    <div class="tow">
-        <div class="tow_todo">
-            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
+    <div class="tow" v-for="(item,index) of list" :key="index">
+        <div class="tow_todo" >
+            <a><img :src="require(`../../assets/${item.img}`)" class="imgtow" /></a>
             <h2 class="text_tow">
-              1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
+              {{item.title}}
             </h2>
             <div class="div_tow">
               <span>发表于</span>
-              <span>2019年5月30日</span>
+              <span>{{item.times}}</span>
               <span>无评论</span>
               <span>BY</span>
-              <span>刘快快</span>
-            </div>
-        </div>  
-    </div>
-    <!--楼层-->
-    <div class="tow">
-        <div class="tow_todo">
-            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
-            <h2 class="text_tow">
-              1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
-            </h2>
-            <div class="div_tow">
-              <span>发表于</span>
-              <span>2019年5月30日</span>
-              <span>无评论</span>
-              <span>BY</span>
-              <span>刘快快</span>
-            </div>
-        </div>  
-    </div>
-    <div class="tow">
-        <div class="tow_todo">
-            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
-            <h2 class="text_tow">
-              1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
-            </h2>
-            <div class="div_tow">
-              <span>发表于</span>
-              <span>2019年5月30日</span>
-              <span>无评论</span>
-              <span>BY</span>
-              <span>刘快快</span>
-            </div>
-        </div>  
-    </div>
-    <div class="tow">
-        <div class="tow_todo">
-            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
-            <h2 class="text_tow">
-              1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
-            </h2>
-            <div class="div_tow">
-              <span>发表于</span>
-              <span>2019年5月30日</span>
-              <span>无评论</span>
-              <span>BY</span>
-              <span>刘快快</span>
+              <span>{{item.writer}}</span>
             </div>
         </div>  
     </div>
@@ -118,9 +72,13 @@ export default {
   data() {
     return {
       pcount:5,
-      pno:1
+      pno:1,
+      list:[]
     }
   },
+  created() {
+     this.loadMore();
+   },
   methods:{
     change(e){
       if(e.target.nodeName=="LI"){
@@ -139,6 +97,24 @@ export default {
           this.pno=parseInt(e.target.innerHTML)
         }
       }
+    },
+    loadMore(){
+    //功能一:当组件创建成功后获取第一页数据 
+    //1:创建url地址
+    var url = "product";
+    //1.1:将当前页码加一
+    var obj = {pno:this.pno}
+    //2:发送ajax请求获取第一页数据
+    this.axios.get(url,{params:obj}).then(res=>{
+      //3:将数据保存data中
+      //console.log(res.data.data);
+      //this.list = res.data.data;
+      //数组拼接操作 11:30
+      var rows = this.list.concat(res.data.data);
+      //赋值
+      this.list = rows;
+      console.log(this.list)
+    })
     }
   },
     props:{
@@ -269,14 +245,18 @@ export default {
           width:100%;
           height:.5rem;
           padding:.6rem .4rem;
+
             li{
               font-size:.2rem;color:#fff;
               padding:0 .1rem ;
+          &:nth-child(2){
+            background-color:#f00;
+          }
               // cursor:pointer;
-              .active{color:#000;}
+              .active{
+                background-color:#f00;}
               .disabled{/*overflow:hidden;*/opacity:0;}
-              }
-          
+              }         
         }
       }
 }   
