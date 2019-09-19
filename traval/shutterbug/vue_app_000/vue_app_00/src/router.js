@@ -7,6 +7,8 @@ import HelloContainer from "./components/HelloWorld.vue"
 //引入登入
 import login from "./components/shutterbug/login.vue"
 
+//头部
+import top from "./components/top/top.vue"
 //底部
 import footer from "./components/footer/footer.vue"
 
@@ -51,6 +53,8 @@ export default new Router({
     // 评论
     {path:'/career',component:career},
     // {path:'/sc_Check',component:sc_Check},
+    //头部
+    {path:'/top',component:top}, 
     //底部
     {path:'/footer',component:footer}, 
 	//手风琴
