@@ -104,9 +104,17 @@
 									<a href="#">冠军激情点燃全场·China GT完美达成天津首秀！</a>
 								</h5>
 								<div class="footer_div2_div1_div3_div_div_div2_div">
-									<p>发表于</p>
-									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月12日</a>
-									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+									<ul>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<p class="footer_div2_div1_div3_div_div_div2_div_p">发表于</p>
+										</li>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月12日</a>
+										</li>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -121,9 +129,17 @@
 									<a href="#">China GT 天津站首回合，XTREME最后一分钟逆转夺冠</a>
 								</h5>
 								<div class="footer_div2_div1_div3_div_div_div2_div">
-									<p>发表于</p>
-									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月12日</a>
-									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+									<ul>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<p class="footer_div2_div1_div3_div_div_div2_div_p">发表于</p>
+										</li>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月12日</a>
+										</li>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -138,9 +154,17 @@
 									<a href="#">《国家地理》摄影大赛全球总冠军谈索尼Alpha 7R III</a>
 								</h5>
 								<div class="footer_div2_div1_div3_div_div_div2_div">
-									<p>发表于</p>
-									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月11日</a>
-									<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+									<ul>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<p class="footer_div2_div1_div3_div_div_div2_div_p">发表于</p>
+										</li>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a1">2019年9月11日</a>
+										</li>
+										<li class="footer_div2_div1_div3_div_div_div2_div_ul_li">
+											<a href="#" class="footer_div2_div1_div3_div_div_div2_div_a2">无评论</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -188,33 +212,6 @@ export default {
 }
 </script>
 <style  lang="scss" scoped>
-	.footer_div2_div1_div3_div_div{
-		display: flex;
-		// justify-content: space-between;
-		flex-flow: row nowrap;
-	}
-	.footer_div2_div1_div3_div_div_div1{
-		height: 90px;
-		padding: 0 15px 0 0;
-	}
-	.footer_div2_div1_div3_div_div_div1>a>img{
-		width: 90px;
-		height: 90px;
-	}
-	.footer_div2_div1_div3_div_div_div2{
-  	display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	.footer_div2_div1_div3_div_div_div2_div>p{
-		margin: 0;
-	}
-	.footer_div2_div1_div3_div_div_div2_div_a1{
-
-	}
-	.footer_div2_div1_div3_div_div_div2_div_a2{
-
-	}
 
   .bottom{
 		margin: 0;
@@ -527,7 +524,7 @@ export default {
     text-transform: uppercase;
 	}
 	.footer_div2_div1_div1_div1>a:hover{
-		background: #232323;
+		background: #141414;
 	}
 	a{
 		color: #fff;
@@ -604,5 +601,52 @@ export default {
 	}
 	.footer_div2_div2_div1>a:hover,.footer_div2_div2_div3>p>a:hover,.footer_div2_div2_div2>ul>li>a:hover,.footer_div2_div2_div1:hover{
 		color: #a0a0a0;
+	}
+	.footer_div2_div1_div3_div_div{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	.footer_div2_div1_div3_div_div_div1{
+		height: 90px;
+		padding: 0 15px 0 0;
+	}
+	.footer_div2_div1_div3_div_div_div1>a>img{
+		width: 90px;
+		height: 90px;
+	}
+	.footer_div2_div1_div3_div_div_div2{
+  	display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer_div2_div1_div3_div_div_div2>h5{
+		font-size: 15px;
+    letter-spacing: -.015em;
+	}
+	.footer_div2_div1_div3_div_div_div2_div>ul{
+		display: flex;
+  	flex-wrap: wrap;
+		margin: 0;
+  	padding: 0;
+  	list-style: none;
+	}
+	.footer_div2_div1_div3_div_div_div2_div_ul_li+.footer_div2_div1_div3_div_div_div2_div_ul_li{
+		margin: 0 0 0 7px;
+	}
+	.footer_div2_div1_div3_div_div_div2_div_p{
+		margin: 0;
+	}
+	.footer_div2_div1_div3_div_div_div2_div{
+		font-size: 11px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+	}
+	.footer_div2_div1_div3_div_div_div2_div_a2::before{
+		margin-right: 8px;
+    content: "\b7";
+	}
+	.footer_div2_div1_div3_div_div_div2>h5>a:hover,.footer_div2_div1_div3_div_div_div2_div_a1:hover,.footer_div2_div1_div3_div_div_div2_div_a2:hover{
+		color: #a0a0a0	;
 	}
 </style>
