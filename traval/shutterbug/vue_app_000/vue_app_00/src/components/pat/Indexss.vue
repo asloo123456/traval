@@ -73,36 +73,8 @@
             </div>
         </div>  
     </div>
-    <div class="tow">
-        <div class="tow_todo">
-            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
-            <h2 class="text_tow">
-              1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
-            </h2>
-            <div class="div_tow">
-              <span>发表于</span>
-              <span>2019年5月30日</span>
-              <span>无评论</span>
-              <span>BY</span>
-              <span>刘快快</span>
-            </div>
-        </div>  
-    </div>
-    <div class="tow">
-        <div class="tow_todo">
-            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
-            <h2 class="text_tow">
-              1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
-            </h2>
-            <div class="div_tow">
-              <span>发表于</span>
-              <span>2019年5月30日</span>
-              <span>无评论</span>
-              <span>BY</span>
-              <span>刘快快</span>
-            </div>
-        </div>  
-    </div>
+    
+    
     <!--分页-->
     <div id="app" class="fen">
           <ul @click="change"> 
@@ -205,6 +177,7 @@ export default {
             .dian{width:6.5rem;
                 height:1rem;display:flex;
                 justify-content:center;
+                // align-items:center;
                 .dian_s{
                     // border-radius:1rem;
                     width:.2rem;
