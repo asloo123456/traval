@@ -17,10 +17,6 @@ export default {
   .top{
     background: #111111;
     width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-right: auto;
-    margin-left: auto;
     display: block;
     box-sizing: border-box;
   }
@@ -33,8 +29,12 @@ export default {
   }
   /*超大屏幕下iframe的高度*/
   @media (min-width: 1120px) {
-    .top{
+    .top1,.top2{
       max-width: 1080px;
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-right: auto;
+      margin-left: auto;
     }
     .top1{
       display: flex;
@@ -45,8 +45,12 @@ export default {
   }
   /*大屏幕下iframe的高度*/ 
   @media (max-width: 1119px) and (min-width: 1020px) {
-    .top{
+    .top1,.top2{
       max-width: 1000px;
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-right: auto;
+      margin-left: auto;
     }
     .top1{
       display: none;
@@ -58,8 +62,12 @@ export default {
   }
   /*中屏幕下iframe的高度*/ 
   @media (max-width: 1019px) and (min-width: 760px) {
-    .top{
+    .top1,.top2{
       max-width: 720px;
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-right: auto;
+      margin-left: auto;
     }
     .top1{
       display: none;
@@ -71,6 +79,12 @@ export default {
   }
   /*小屏幕下iframe的高度*/ 
   @media (max-width: 759px) {
+    .top1,.top2{
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-right: auto;
+      margin-left: auto;
+    }
     .top1{
       display: none;
     }
