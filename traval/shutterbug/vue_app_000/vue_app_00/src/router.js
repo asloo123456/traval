@@ -43,7 +43,7 @@ export default new Router({
     {path:'/',component:HelloContainer},
 
     {path:'/login',component:login},
-// 中间
+    // 中间
     {path:'/Indexss',component:Indexss},
     // 搜索
     {path:'/Search',component:Search},
@@ -55,7 +55,7 @@ export default new Router({
     {path:'/top',component:top}, 
     //底部
     {path:'/footer',component:footer}, 
-	//手风琴
+	  //手风琴
     {path:'/souFen',component:souFen},
     //购物车
     {path:'/shopping',component:shopping},
