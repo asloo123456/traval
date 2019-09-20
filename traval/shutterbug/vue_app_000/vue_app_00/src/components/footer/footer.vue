@@ -1,5 +1,6 @@
 <template>
 	<div class="bottom">
+		<!-- 第一部分：广告 -->
 		<div class="footer_div1">
 			<div class="footer_div1_div">
 				<div class="footer_div1_div_div">
@@ -25,23 +26,31 @@
 				</div>
 			</div>
 		</div>
+		<!-- 第二部分和第三部分 -->
 		<div class="footer_div2">
+			<!-- 第二部分 -->
 			<div class="footer_div2_div1">
+				<!-- 左边 -->
 				<div class="footer_div2_div1_div1" >
+					<!-- logo图片 -->
 					<div class="footer_div2_div1_div1_div2">
 						<img src="../../assets/new_fotomen_logo2(1).png" alt="">
 					</div>
+					<!-- 文字 -->
 					<div class="footer_div2_div1_div1_div">
 						<p>它是[摄影之友]的今生,是“摄影之友”的未来。</p>
 						<p>是摄影历史资料馆,是摄影技艺集散地。<br>是摄影新锐训练场,是摄影大师集中营。<br>是摄影潮流娱乐圈,是最具价值影像网站。</p>
 						<p>只要你热爱生活,一定能在这里找到“真爱”。然后一起,Photo your life！</p>
 					</div>
+					<!-- 按钮 -->
 					<div class="footer_div2_div1_div1_div1">
 						<a href="#">了解更多</a>
 					</div>
 				</div>
+				<!-- 中间 -->
 				<div class="footer_div2_div1_div2">
 					<h5>标签</h5>
+					<!-- a标签 -->
 					<div class="footer_div2_div1_div2_div">
 						<a href="#">#《摄影之友》</a>
 						<a href="#">#《摄影旅游》</a>
@@ -90,15 +99,20 @@
 						<a href="#">#黑白</a>
 					</div>	
 				</div>
+				<!-- 右边 -->
 				<div class="footer_div2_div1_div3">
 					<h5>近期更新</h5>
+					<!-- 近期更新内容 -->
 					<div class="footer_div2_div1_div3_div">
+						<!-- 第一层 -->
 						<div class="footer_div2_div1_div3_div_div">
+							<!-- 左边图片 -->
 							<div class="footer_div2_div1_div3_div_div_div1">
 								<a href="#">
 									<img src="../../assets/1.png" alt="">
 								</a>
 							</div>
+							<!-- 右边文字 -->
 							<div class="footer_div2_div1_div3_div_div_div2">
 								<h5>
 									<a href="#">冠军激情点燃全场·China GT完美达成天津首秀！</a>
@@ -118,12 +132,15 @@
 								</div>
 							</div>
 						</div>
+						<!-- 第二层 -->
 						<div class="footer_div2_div1_div3_div_div">
+							<!-- 左边图片 -->
 							<div class="footer_div2_div1_div3_div_div_div1">
 								<a href="#">
 									<img src="../../assets/2.png" alt="">
 								</a>
 							</div>
+							<!-- 右边文字 -->
 							<div class="footer_div2_div1_div3_div_div_div2">
 								<h5>
 									<a href="#">China GT 天津站首回合，XTREME最后一分钟逆转夺冠</a>
@@ -143,12 +160,16 @@
 								</div>
 							</div>
 						</div>
+						<!-- 第三层 -->
 						<div class="footer_div2_div1_div3_div_div">
+							<!-- 左边图片 -->
 							<div class="footer_div2_div1_div3_div_div_div1">
 								<a href="#">
 									<img src="../../assets/3.png" alt="">
 								</a>
 							</div>
+
+							<!-- 右边文字 -->
 							<div class="footer_div2_div1_div3_div_div_div2">
 								<h5>
 									<a href="#">《国家地理》摄影大赛全球总冠军谈索尼Alpha 7R III</a>
@@ -171,9 +192,13 @@
 					</div>
 				</div>
 			</div>
+			<!-- 第三部分 -->
 			<div class="footer_div2_div2">
+				<!-- 上层 -->
 				<div class="footer_div2_div2_div">
+					<!-- 左边logo文字 -->
 					<a href="#" class="footer_div2_div2_div1">FOTOMEN</a>
+					<!-- 右边面包屑 -->
 					<div class="footer_div2_div2_div2">
 						<ul>
 							<li class="footer_ul_li-item">
@@ -188,6 +213,7 @@
 						</ul>
 					</div>
 				</div>
+				<!-- 下层 -->
 				<div class="footer_div2_div2_div3">
 					Copyright © 2006~2019 FOTOMEN. All rights reserved.
 					<p class="footer_div2_div2_div3_p1">
