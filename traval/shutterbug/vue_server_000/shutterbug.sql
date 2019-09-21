@@ -7,7 +7,7 @@ CREATE TABLE s_index_carousel(
   cid INT PRIMARY KEY AUTO_INCREMENT,
   img VARCHAR(128),
   title VARCHAR(64),
-  times Date,
+  year VARCHAR(32),
   writer VARCHAR(32),
   href VARCHAR(128)
 );
@@ -39,7 +39,7 @@ INSERT INTO s_index_product VALUES(NULL,"mcj07.jpg","风景旋涡——当代风
 /****商品列表****/
 INSERT INTO s_index_product VALUES(NULL,"m001.jpg","小而强大，佳能发布APS-C画幅微单相机新品EOS M6 Mark II","2019年8月28日","JR","product_details.html?lid=13");
 INSERT INTO s_index_product VALUES(NULL,"m002.jpg","多方位提速，佳能发布数码单反相机新品EOS 90D","2019年8月28日","JR","product_details.html?lid=14");
-INSERT INTO s_index_product VALUES(NULL,"m003.jpg","八月聚首八达岭长城，赴精彩震撼影像之约","2019年8月9日","CY3","product_details.html?lid=15");
+INSERT INTO s_index_product VALUES(NULL,"m003.png","八月聚首八达岭长城，赴精彩震撼影像之约","2019年8月9日","CY3","product_details.html?lid=15");
 INSERT INTO s_index_product VALUES(NULL,"m004.jpg","宠物摄影革命 谈索尼实时动物眼部对焦","2019年7月24日","JR","product_details.html?lid=16");
 INSERT INTO s_index_product VALUES(NULL,"m005.jpg","速度为先，佳能G5 X Mark II及G7 X Mark III齐登场","2019年7月9日","JR","product_details.html?lid=17");
 INSERT INTO s_index_product VALUES(NULL,"m006.jpg","你比夜色更美，华为nova5系列颐和园演绎潮流'自拍奇幻夜'","2019年7月16日","JR","product_details.html?lid=18");
@@ -56,7 +56,7 @@ INSERT INTO s_index_product VALUES(NULL,"m014.jpg","'iFootage印迹'首届创新
 INSERT INTO s_index_product VALUES(NULL,"image01.jpg","从展览中去理解艺术","2019年9月2日","义天天","product_details.html?lid=28");
 INSERT INTO s_index_product VALUES(NULL,"image02.jpg","归去来兮——肖日保摄影展","2019年8月30日","CY3","product_details.html?lid=29");
 INSERT INTO s_index_product VALUES(NULL,"image03.jpg","群展：人间指南（下）","2019年8月30日","CY3","product_details.html?lid=30");
-INSERT INTO s_index_product VALUES(NULL,"image04.jpg","回归APS-C战场 索尼秋季发布会α6600与新镜头等新品体验","2019年8月30日","义天天","product_details.html?lid=31");
+INSERT INTO s_index_product VALUES(NULL,"image03.jpg","回归APS-C战场 索尼秋季发布会α6600与新镜头等新品体验","2019年8月30日","义天天","product_details.html?lid=31");
 INSERT INTO s_index_product VALUES(NULL,"image05.png","E卡口镜头已达54支！ 索尼SEL1655G/SEL70350G发布","2019年8月28日","义天天","product_details.html?lid=32");
 INSERT INTO s_index_product VALUES(NULL,"image06.png","APS-C画幅阵容再壮大 索尼微单™Alpha 6600/6100发布","2019年8月28日","义天天","product_details.html?lid=33");
 INSERT INTO s_index_product VALUES(NULL,"image07.jpg","新镜皇？松下发布L-Mount新镜头LUMIX S PRO 24-70mm F2.8","2019年8月28日","JR","product_details.html?lid=34");
