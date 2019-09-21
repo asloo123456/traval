@@ -4,24 +4,17 @@
 		<div class="footer_div1">
 			<div class="footer_div1_div">
 				<div class="footer_div1_div_div">
+					<!-- 京东图标 -->
 					<div class="footer_div1_div_div_div1">
 						<img src="../../assets/aea226a9be6fddee.jpg" alt="">
 					</div>
-					<div class="footer_div1_div_div_div2">
-						<div class="footer_div1_div_div_div2_div1"></div>
-						<div class="footer_div1_div_div_div2_div2">
-							<div class="footer_div1_div_div_div2_div2_div1"></div>
-							<div class="footer_div1_div_div_div2_div2_div2"></div>
-							<div class="footer_div1_div_div_div2_div2_div3"></div>
-						</div>
+					<!-- 中间 -->
+					<div class="">
+
 					</div>
-					<div class="footer_div1_div_div_div3">
-						<div class="footer_div1_div_div_div3_div1"></div>
-						<div class="footer_div1_div_div_div3_div2">
-							<div class="footer_div1_div_div_div3_div2_div1"></div>
-							<div class="footer_div1_div_div_div3_div2_div2"></div>
-							<div class="footer_div1_div_div_div3_div2_div3"></div>
-						</div>
+					<!-- 右边 -->
+					<div class="">
+						
 					</div>
 				</div>
 			</div>
