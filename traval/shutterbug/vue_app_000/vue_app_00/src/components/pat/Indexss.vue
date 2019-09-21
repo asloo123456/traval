@@ -53,35 +53,10 @@
               <span>{{item.times}}</span>
               <span>无评论</span>
               <span>BY</span>
-<<<<<<< HEAD
-              <span>刘快快</span>
-            </div>
-        </div>  
-    </div>
-    <!--楼层-->
-    <div class="tow">
-        <div class="tow_todo">
-            <a><img src="../../assets/m009.jpg" class="imgtow" /></a>
-            <h2 class="text_tow">
-              1698元起魅族16Xs正式发布：极边全面屏，三摄长续航
-            </h2>
-            <div class="div_tow">
-              <span>发表于</span>
-              <span>2019年5月30日</span>
-              <span>无评论</span>
-              <span>BY</span>
-              <span>刘快快</span>
-            </div>
-        </div>  
-    </div>
-    
-    
-=======
               <span>{{item.writer}}</span>
             </div>
         </div>  
     </div>
->>>>>>> 9ff838ab7aae1d974712382f0681229305b386b8
     <!--分页-->
     <div id="app" class="fen">
           <ul @click="change"> 
