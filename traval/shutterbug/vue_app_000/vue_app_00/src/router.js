@@ -20,8 +20,11 @@ import Search_icon from "./components/pat/Search_icon.vue"
 // 评论
 import career from "./components/pat/career.vue"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5cba3504bb4c6ee7aa7614d2c852f67fdb396004
 // import sc_Check from "./components/pat/sc_Check.vue"
 
 
@@ -37,9 +40,13 @@ import shopping from "./components/shoppingCart/shopping.vue"
 //商品列表
 import product from  "./components/product/product.vue"
 
+<<<<<<< HEAD
 
 
 
+=======
+
+>>>>>>> 5cba3504bb4c6ee7aa7614d2c852f67fdb396004
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -47,7 +54,7 @@ export default new Router({
     {path:'/',component:HelloContainer},
 
     {path:'/login',component:login},
-// 中间
+    // 中间
     {path:'/Indexss',component:Indexss},
     // 搜索
     {path:'/Search',component:Search},
@@ -59,7 +66,7 @@ export default new Router({
     {path:'/top',component:top}, 
     //底部
     {path:'/footer',component:footer}, 
-	//手风琴
+	  //手风琴
     {path:'/souFen',component:souFen},
     //购物车
     {path:'/shopping',component:shopping},
