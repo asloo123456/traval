@@ -25,7 +25,7 @@
       </div>
       <!-- 第二层 -->
       <div class="top1_center2">
-        <!-- 左边三条横杠 -->
+        <!-- 右边三条横杠 -->
         <div style="display: flex;flex-direction: column;justify-content: center;">
           <button class="nav-mobile-button">
             <span class="sr-only"></span>
@@ -35,6 +35,10 @@
           </button>
           <!-- 右边 -->
           <div></div>
+        </div>
+        <!-- 左边导航栏 -->
+        <div>
+          
         </div>
       </div>
     </div>
