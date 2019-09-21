@@ -186,6 +186,7 @@ export default {
             .dian{width:6.5rem;
                 height:1rem;display:flex;
                 justify-content:center;
+                // align-items:center;
                 .dian_s{
                     // border-radius:1rem;
                     width:.2rem;
