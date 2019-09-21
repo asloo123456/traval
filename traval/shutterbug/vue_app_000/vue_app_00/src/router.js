@@ -20,6 +20,11 @@ import Search_icon from "./components/pat/Search_icon.vue"
 // 评论
 import career from "./components/pat/career.vue"
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 5cba3504bb4c6ee7aa7614d2c852f67fdb396004
 // import sc_Check from "./components/pat/sc_Check.vue"
 
 
@@ -35,7 +40,13 @@ import shopping from "./components/shoppingCart/shopping.vue"
 //商品列表
 import product from  "./components/product/product.vue"
 
+<<<<<<< HEAD
 
+
+
+=======
+
+>>>>>>> 5cba3504bb4c6ee7aa7614d2c852f67fdb396004
 Vue.use(Router)
 export default new Router({
   routes: [

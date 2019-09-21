@@ -61,7 +61,7 @@
     <div id="app" class="fen">
           <ul @click="change"> 
             <li :class="pno==1?'disabled':''">上一页</li>
-            <li  v-for="i of pcount" :key="i" :class="pno==i?'active':''">{{i}}</li>
+            <li  v-for="i of pcount" :key="i" :class="pno==i?'active':''" :data-i="i" ref="li">{{i}}</li>
             <li :class="pno==pcount?'disabled':''">下一页</li>
           </ul>
     </div>
@@ -79,6 +79,10 @@ export default {
   created() {
      this.loadMore();
    },
+   updated() {
+     this.loadMore();
+    
+   },
   methods:{
     change(e){
       if(e.target.nodeName=="LI"){
@@ -86,11 +90,13 @@ export default {
           case "上一页":
           if(this.pno>1){
             this.pno--;
+            window.scroll(0,0);
           }
           break;
           case "下一页":
           if(this.pno<this.pcount){
             this.pno++;
+             window.scroll(0,0);
           }
           break;
           default:
@@ -103,17 +109,16 @@ export default {
     //1:创建url地址
     var url = "product";
     //1.1:将当前页码加一
-    var obj = {pno:this.pno}
+    var pno=this.pno
+    var obj = {pno}
     //2:发送ajax请求获取第一页数据
     this.axios.get(url,{params:obj}).then(res=>{
       //3:将数据保存data中
       //console.log(res.data.data);
       //this.list = res.data.data;
       //数组拼接操作 11:30
-      var rows = this.list.concat(res.data.data);
+      this.list =res.data.data;
       //赋值
-      this.list = rows;
-      console.log(this.list)
     })
     }
   },
@@ -249,15 +254,13 @@ export default {
             li{
               font-size:.2rem;color:#fff;
               padding:0 .1rem ;
-          &:nth-child(2){
-            background-color:#f00;
-          }
               // cursor:pointer;
-              .active{
-                background-color:#f00;}
+     
+            }
+            .active{
+                background:#ddd;color:#000;}
               .disabled{/*overflow:hidden;*/opacity:0;}
-              }         
-        }
+              }    
       }
 }   
     

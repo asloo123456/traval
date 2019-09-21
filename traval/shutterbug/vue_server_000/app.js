@@ -90,8 +90,7 @@ server.get("/product",(req,res)=>{
      //传入页码和页大小
   pool.query(sql,[offset,ps],(err,result)=>{
     //6：获取返回结果发送客户端
-    if(err)throw err;
-   
+    if(err)throw err; 
     res.send({code:1,msg:"查询成功",data:result});
   })
   })
