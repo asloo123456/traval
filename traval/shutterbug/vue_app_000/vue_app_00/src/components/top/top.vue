@@ -5,14 +5,14 @@
       <!-- 第一层 -->
       <div class="top1_center1">
         <!-- 左边 -->
-        <div>
-          <a href="#" style="border-radius: 2px;background-color: #474747;color: #eee;padding: 6px 16px;">
-            <span>RSS</span>
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+          <a href="#" style="border-radius: 2px;background-color: #474747;color: #eee;padding: 6px 16px;display: flex;flex-direction: column;justify-content: center;">
+            <span style="font-size: 12px;font-weight: 500;letter-spacing: 3px;line-height: 1.5;">RSS</span>
           </a>
         </div>
         <!-- 中间logo -->
-        <div>
-          <a href="#">
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+          <a class="top_logo" href="#">
             <img src="../../assets/new_fotomen_logo2.png" alt="">
           </a>
         </div>
@@ -36,9 +36,49 @@
           <!-- 右边 -->
           <div></div>
         </div>
-        <!-- 左边导航栏 -->
-        <div>
-          
+        <!-- 中间导航栏 -->
+        <div style="display: flex;justify-content:space-between;">
+          <ul style="display: flex;flex-wrap: wrap;margin: 0;padding: 0;list-style: none;">
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">首页</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">新闻</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">观片</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">攻略</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">装备</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">专题</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">订阅</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">商店</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">行摄</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">鱼眼</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">影像讲堂</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 右边放大镜 -->
+        <div style="visibility: hidden;">
+          <a style="width:18px;height:27px;padding:7px 0;margin-left:14px;display: flex;flex-direction: column;justify-content: center;" href="#">
+            <img style="width:18PX;height:18PX;" src="../../assets/sou(1).png" alt="">
+          </a>
         </div>
       </div>
     </div>
@@ -72,6 +112,36 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  .top_logo{
+    height: 36.5px;
+    width: 131px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .top_logo>img{
+    height: 36.5px;
+    width: 131px;
+    transition: all .3s ease-in-out;
+  }
+  .top_logo>img:hover{
+    transform:translateX(0px) rotate(360deg)  skew(0deg,0deg);
+  }
+  .top_ul_li-item+.top_ul_li-item{
+    margin: 0 0 0 32px;
+  }
+  .top_ul_li-item>a{
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .li-item>a::after{
+    margin-left: 8px;
+    font-family: "Icons";
+    font-size: 12px;
+    content: "\e906";
+  }
+
   .top{
     background: #111111;
     width: 100%;
