@@ -61,7 +61,7 @@
     <div id="app" class="fen">
           <ul @click="change"> 
             <li :class="pno==1?'disabled':''">上一页</li>
-            <li  v-for="i of pcount" :key="i" :class="pno==i?'active':''" :data-i="i" ref="li">{{i}}</li>
+            <li  v-for="i of pcount" :key="i" :class="pno==i?'active':''" :data-i="i">{{i}}</li>
             <li :class="pno==pcount?'disabled':''">下一页</li>
           </ul>
     </div>
@@ -71,7 +71,7 @@
 export default {
   data() {
     return {
-      pcount:5,
+      pcount:3,
       pno:1,
       list:[]
     }
@@ -80,8 +80,7 @@ export default {
      this.loadMore();
    },
    updated() {
-     this.loadMore();
-    
+     this.loadMore();   
    },
   methods:{
     change(e){
