@@ -10,6 +10,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <div></div>
+      <div>
+        <img src="../../assets/sou(1).png" alt="">
+      </div>
     </div>
 
   </div>
@@ -23,15 +27,10 @@ export default {
   .nav-mobile-button {
     position: relative;
     float: right;
-    padding: 9px 10px;
-    margin-top: 8px;
-    margin-right: 15px;
-    margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 4px;
-    background: #eee; 
+    border-radius: 4px; 
   }
   .nav-mobile-button .sr-only {
     position: absolute;
@@ -48,7 +47,7 @@ export default {
     margin-top: 4px;
     width: 22px;
     height: 2px;
-    background: #f65d3f;
+    background: #ffffff;
     border-radius: 1px; 
   }
 
