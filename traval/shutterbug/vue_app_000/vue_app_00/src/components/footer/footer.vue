@@ -9,12 +9,93 @@
 						<img src="../../assets/aea226a9be6fddee.jpg" alt="">
 					</div>
 					<!-- 中间 -->
-					<div class="">
+					<div class="footer_center" >
+					    <mt-tab-container class="one" v-model="active" >
+						  <mt-tab-container-item class="ones" id="tab1">
+                          <a>
+					       <img src="../../assets/56fe9b66Nef17a54c.jpg">
+					      </a>
+                          <div class="pic">
+						   <h6>￥   600.00</h6>
+						   <h4>艾璐歌 摩托车 雷鹰二代 迷你跑车 两冲程混合油版手拉启动 大轮真空胎可选 迷你小摩托车 黑色双排小轮子</h4>
+						  </div>
+						  </mt-tab-container-item>
+						</mt-tab-container>
+						
+						 
+						 <!--第二个-->
+						 <mt-tab-container class="one"  v-model="active">
+						  <mt-tab-container-item class="ones" id="tab2">
+                          <a>
+					       <img src="../../assets/57ce5e4dN2584db01.jpg">
+					      </a>
+                          <div class="pic">
+						   <h6>￥   99.90</h6>
+						   <h4>酷冷至尊(CoolerMaster) 纳米钻石导热膏NANO(纳米级工艺/热传导率高达11/高性能CPU、GPU/超频用户使用)</h4>
+						  </div>
+						  </mt-tab-container-item>
+						 </mt-tab-container>
+						 <!--第三个-->
+						 <mt-tab-container class="one" v-model="active">
+						  <mt-tab-container-item class="ones" id="tab3">
+                          <a>
+					       <img src="../../assets/1f205ea2c708681e.jpg">
+					      </a>
+                          <div class="pic">
+						   <h6>￥   2958.00</h6>
+						   <h4>APPLE苹果ipad2018款9.7英寸iPad2019新款10.2英寸平板电脑air2更新版 金色 18款9.7英寸 128G WLAN版-键盘+壳膜</h4>
+						  </div>
+						  </mt-tab-container-item>
+						 </mt-tab-container>
 
+						 <div class="uname" >
+						   <div class="bag" @mousemove="active='tab1'"><a >热卖</a></div>
+						   <div class="bag" @mousemove="active='tab2'"><a >散热器</a></div>
+						   <div class="bag" @mousemove="active='tab3'"><a >平板电脑</a></div>
+						 </div>
 					</div>
 					<!-- 右边 -->
-					<div class="">
-						
+					<div class="footer_right">
+					  <mt-tab-container class="one" v-model="actives">
+					    <mt-tab-container-item class="ones" id="tab4">
+						<a>
+						  <img src="../../assets/ffef4e963b34e864.jpg">
+						</a>
+						<div class="pic">
+						   <h6>￥   177.00</h6>
+						   <h4>嘉实多Castrol汽车机油发动机油润滑油磁护极护全合成机油 金嘉护半合成油 银嘉护嘉力矿物油 磁护专享全合成5W-40 SN 4L</h4>
+						 </div>
+						 </mt-tab-container-item>
+					  </mt-tab-container>
+					  <!--222-->
+					  <mt-tab-container class="one" v-model="actives">
+					    <mt-tab-container-item class="ones" id="tab5">
+						<a>
+						  <img src="../../assets/6f9b707703707655.jpg">
+						</a>
+						<div class="pic">
+						   <h6>￥   177.00</h6>
+						   <h4>馥花 短外套女春秋装2019新款外套女学生韩版宽松装棒球服女士夹克 天蓝色薄款 M(85-100斤)</h4>
+						 </div>
+						 </mt-tab-container-item>
+					  </mt-tab-container>	
+					  <!--333-->
+					  <mt-tab-container class="one" v-model="actives">
+					    <mt-tab-container-item class="ones" id="tab6">
+						<a>
+						  <img src="../../assets/9754e843dd47116a.jpg">
+						</a>
+						<div class="pic">
+						   <h6>￥   1247.00</h6>
+						   <h4>小米（MI） 小米平板4/Plus 四代 电脑 骁龙660 AIE处理器 金色 【8英寸屏】WIFI版 4GB+64GB</h4>
+						 </div>
+						 </mt-tab-container-item>
+					  </mt-tab-container>		 
+						 <div class="uname">
+						   <div class="bag" @mousemove="actives='tab4'"><a>润滑油</a></div>
+						   <div class="bag" @mousemove="actives='tab5'"><a>短背心</a></div>
+						   <div class="bag" @mousemove="actives='tab6'"><a>平板电视</a></div>
+						 </div>
 					</div>
 				</div>
 			</div>
@@ -227,7 +308,15 @@
 </template>
 <script>
 export default {
-	
+	data() {
+		return {
+			active:"tab1",
+			actives:"tab4"
+		}
+	},
+	methods: {
+		
+	},
 }
 </script>
 <style  lang="scss" scoped>
@@ -491,17 +580,96 @@ export default {
 		border-bottom: 1px solid #232323;
 	}
 	.footer_div1_div_div{
+		display:flex;
 		position: relative;
 		height: 90px;
 		width: 722px;
 		border: 3px solid #c91521;
 		box-sizing: border-box;
+		// 中间
+		.footer_center{
+			display:flex;
+			// overflow:hidden;
+			//  justify-content:space-between;
+			align-items:center;
+           background:#fff;
+		   width:3.1rem;
+		   height:0.84rem;
+		  .one{
+			  display:flex;
+			  .ones{
+				  display:flex;
+		    img{
+			 width:.8rem;
+			 height:.8rem;
+		     };
+		    .pic{
+			h6{color:red;margin:0 0 0 .1rem}
+		    h4{font-size:.1rem;height:.5rem;margin:.1rem 0 0 .1rem;overflow:hidden;}
+		    };
+			};
+		  };
+		  .uname{
+             .bag{
+				 text-align:center;
+				 width:.7rem;
+				 height:.28rem;
+				 line-height:.3rem;
+				 background:#E4E3E3;
+				 opacity:0.8;
+				 &:hover{background:#c91521;color:#fff;}
+				 a{
+					 color:#000;cursor:pointer;
+					 &:hover{color:#fff;}
+					 }
+			 }
+		  }
+		};
+		// 右边
+		.footer_right{
+			display:flex;
+			background:#fff;
+			align-items:center;
+			width:3.1rem;
+			height:0.84rem;
+			.one{
+				display:flex;
+				.ones{
+					display:flex;
+                    img{
+				width:.8rem;
+				height:.8rem;
+			};
+			.pic{
+			h6{color:red;margin:0 0 0 .1rem}
+		    h4{font-size:.1rem;height:.5rem;margin:.1rem 0 0 .1rem;overflow:hidden;}
+		     };
+		   };
+		 };
+			
+		  .uname{
+             .bag{
+				 text-align:center;
+				 width:.7rem;
+				 height:.28rem;
+				 line-height:.3rem;
+				 background:#E4E3E3;
+				 opacity:0.8;
+				 &:hover{background:#c91521;color:#fff;}
+				 a{
+					 color:#000;cursor:pointer;
+					 &:hover{color:#fff;}
+			    }
+			 }
+		  };
+		}
 	}
 	.footer_div1_div_div_div1{
 		height: 84px;
 		width: 95px;
 		position: relative;
 		overflow: hidden;
+
 	}
 	.footer_div1_div_div_div1>img{
 		height: 150%;
@@ -509,6 +677,11 @@ export default {
 		top:-25%;
 		left:-55%;
 	}
+	
+    
+
+
+
 	.footer_div2{
 		color: #a0a0a0;
 		padding: 0 20px;

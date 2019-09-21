@@ -1,14 +1,14 @@
 <template>
     <div class="post_comme">
         <h1 style="font-size:.9rem;color:#fff;text-align:center">工作机会</h1>
-        <h3 style="font-size:.5rem;color:#dc223c">高至影像科技</h3>
+        <h3 style="font:.5rem 'HanHei';color:#dc223c">高至影像科技</h3>
         <h3 style="font:.4rem 'HanHei';color:#fff">工作地点</h3>
         <p style="color:#a0a0a0;font:.3rem 'HanHei'">杭州</p>
         <h3 style="font:.4rem 'HanHei';color:#fff;margin-top:.8rem">基本要求</h3>
         <ul style="padding-left:.6rem; list-style:disc">
-          <li style="padding:0;font:0.27rem 'HeiTi';color:#DBDBDB;margin-bottom:.2rem ">热爱摄影， 热爱影像，热爱互联网，热爱与视觉相关的事物， 能够理解美食一种有逻辑综合感受， 而非单一的视觉刺激</li>
-          <li style="padding:0;font:0.27rem 'HeiTi';color:#DBDBDB;margin-bottom:.2rem  ">能够跟踪和学习最新的软件技术，对本专业的对接专业有足够了解</li>
-          <li style="padding:0;font:0.27rem 'HeiTi';color:#DBDBDB; ">有良好的自律和自我管理能力、创新情结和创业心态，善于沟通，乐于助人</li>
+          <li style="padding:0;font:0.27rem 'HeiTi';color:#DBDBDB;margin-bottom:.2rem;border-bottom:0 ">热爱摄影， 热爱影像，热爱互联网，热爱与视觉相关的事物， 能够理解美食一种有逻辑综合感受， 而非单一的视觉刺激</li>
+          <li style="padding:0;font:0.27rem 'HeiTi';color:#DBDBDB;margin-bottom:.2rem;border-bottom:0  ">能够跟踪和学习最新的软件技术，对本专业的对接专业有足够了解</li>
+          <li style="padding:0;font:0.27rem 'HeiTi';color:#DBDBDB;border-bottom:0 ">有良好的自律和自我管理能力、创新情结和创业心态，善于沟通，乐于助人</li>
         </ul>
         <h3 style="font:.5rem 'HanHei';color:#fff">简历投递</h3>
         <p style="color:#A0A0A0;font:.3rem 'HanHei'">e-Mail: yujg@syzychina.com</p>
@@ -31,9 +31,9 @@
         <ul>
           <h2>评论:</h2>
            <li v-for="(task,i) of tasks"  :key="i">
-           <div style="margin-bottom:.3rem" >
+           <div style="margin-bottom:.3rem"  >
              <img style="background:#fff;border-radius:50%;margin-right:.3rem" src="../../assets/ren.png"/>
-             <b :key="i" style="color:#fff;font:.25rem 'HanHei';height:.4rem;display:block">{{uname}}</b>
+             <b  style="color:#fff;font:.25rem 'HanHei';height:.4rem;display:block" >{{uname}}</b>
              <p style="color:#595959;height:.4rem;position:relative;margin:0" >{{new Date(timer).toLocaleString()}}</p>
            </div>
             {{task}}
@@ -42,7 +42,7 @@
         <!--/////-->
         <h2>发表评论</h2>
         <p>电子邮件地址不会被公开。必须填项已用<span style="color:red;margin:0;font-size:.2rem">*</span>标注</p>
-        <form>
+        <form  >
           <div>
           <label style="display:block">你的评论<span style="color:red;font-size:.2rem">*</span></label>
           <textarea  class="form_control" v-model="task" ></textarea>
@@ -69,11 +69,15 @@ export default {
             
             tasks: ["本人热爱摄影 热爱艺术 不过是学语言专业的希望有机会加入做一些创意 根美术 艺术有关的工作","科研人员，业余爱好摄影二十年，对摄影有无上的热爱，单是不想放弃现在的科研共作，想问你们找兼职人员么？"],
             task:"",
+            list:[],
             uname:"哎呦不错哦",
             // timer:1566199863843,
             timer:new Date().getTime(),
             
+<<<<<<< HEAD
            
+=======
+>>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
         }
         setInterval(function(){
             timer:new Date().getTime()
@@ -83,6 +87,7 @@ export default {
     methods: {
         sub(){    
         this.tasks.push(this.task);
+<<<<<<< HEAD
         this.task=""; 
         var d1=getElementById("d1");
         var d2=getElementById("d2");
@@ -94,6 +99,10 @@ export default {
             }
         }
             
+=======
+        this.task="";  
+        console.log(this.list);
+>>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
         },
 
     },
@@ -137,6 +146,7 @@ export default {
                font-size:.3rem;
                padding:.2rem 0; 
                color:#fff;
+               border-bottom:.01rem solid #aaa;
            }
        } 
     }
