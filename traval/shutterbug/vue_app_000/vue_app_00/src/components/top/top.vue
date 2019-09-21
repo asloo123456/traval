@@ -44,15 +44,45 @@
             </li>
             <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">新闻</a>
+              <ul>
+                <li><a href="#">展讯</a></li>
+                <li><a href="#">事件</a></li>
+                <li><a href="#">摄论</a></li>
+                <li><a href="#">史话</a></li>
+              </ul>
             </li>
             <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">观片</a>
+              <ul>
+                <li><a href="#">人像</a></li>
+                <li><a href="#">纪实</a></li>
+                <li><a href="#">生活</a></li>
+                <li><a href="#">风光</a></li>
+                <li><a href="#">艺术</a></li>
+                <li><a href="#">胶片</a></li>
+                <li><a href="#">静物</a></li>
+                <li><a href="#">黑白</a></li>
+                <li><a href="#">手机摄影</a></li>
+              </ul>
             </li>
             <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">攻略</a>
+              <ul>
+                <li><a href="#">零基础</a></li>
+                <li><a href="#">前期</a></li>
+                <li><a href="#">后期</a></li>
+                <li><a href="#">行摄</a></li>
+              </ul>
             </li>
             <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">装备</a>
+              <ul>
+                <li><a href="#">快递</a></li>
+                <li><a href="#">器材</a></li>
+                <li><a href="#">户外</a></li>
+                <li><a href="#">座驾</a></li>
+                <li><a href="#">编辑推荐</a></li>
+              </ul>
             </li>
             <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">专题</a>
@@ -63,8 +93,12 @@
             <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">商店</a>
             </li>
-            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+            <li class="top_ul_li-item li-item display5" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">行摄</a>
+              <ul>
+                <li><a href="#">作品</a></li>
+                <li><a href="#">杂志版面</a></li>
+              </ul>
             </li>
             <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">鱼眼</a>
@@ -112,6 +146,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  // logo a标签
   .top_logo{
     height: 36.5px;
     width: 131px;
@@ -119,14 +154,17 @@ export default {
     flex-direction: column;
     justify-content: center;
   }
+  // logo图片
   .top_logo>img{
     height: 36.5px;
     width: 131px;
     transition: all .3s ease-in-out;
   }
+  // 鼠标悬停logo图片旋转
   .top_logo>img:hover{
     transform:translateX(0px) rotate(360deg)  skew(0deg,0deg);
   }
+  // 导航栏
   .top_ul_li-item+.top_ul_li-item{
     margin: 0 0 0 32px;
   }
@@ -184,6 +222,7 @@ export default {
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 4px; 
+    cursor: pointer;
   }
   .nav-mobile-button .sr-only {
     position: absolute;
