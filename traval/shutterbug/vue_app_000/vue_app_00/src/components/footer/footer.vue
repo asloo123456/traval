@@ -7,7 +7,11 @@
 						<img src="../../assets/aea226a9be6fddee.jpg" alt="">
 					</div>
 					<div class="footer_div1_div_div_div2">
-						<div class="footer_div1_div_div_div2_div1"></div>
+						<div class="footer_div1_div_div_div2_div1">
+						  <a>
+						    <img>
+						  </a>
+						</div>
 						<div class="footer_div1_div_div_div2_div2">
 							<div class="footer_div1_div_div_div2_div2_div1"></div>
 							<div class="footer_div1_div_div_div2_div2_div2"></div>
