@@ -1,18 +1,25 @@
 <template>
   <div class="top">
     <div class="top1">
-
-    </div>
-    <div class="top2">
-      <button class="nav-mobile-button">
-        <span class="sr-only"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <div></div>
-      <div>
-        <img src="../../assets/sou(1).png" alt="">
+      <div></div>
+    </div>
+    <div class="top2" style="display: flex;justify-content: space-between;">
+      <div style="display: flex;flex-direction: column;justify-content: center;">
+        <button class="nav-mobile-button">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div style="display: flex;flex-direction: column;justify-content: center;">
+        <a href="#" class="fotomen">FOTOMEN</a>
+      </div>
+      <div style="display: flex;flex-direction: column;justify-content: center;">
+        <a style="width:18px;height:27px;padding:7px 0;margin-left:14px;display: flex;flex-direction: column;justify-content: center;" href="#">
+          <img style="width:18PX;height:18PX;" src="../../assets/sou(1).png" alt="">
+        </a>
       </div>
     </div>
 
@@ -24,9 +31,26 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  span{
+    margin: 0;
+  }
+  button{
+    margin: 0;
+    padding: 0;
+  }
+  .fotomen{
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -.015em;
+    line-height: 1;
+    text-transform: none;
+    color: #dadada;
+  }
+  .fotomen:hover{
+    color: #ffffff;
+  }
   .nav-mobile-button {
-    position: relative;
-    float: right;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -34,23 +58,18 @@ export default {
   }
   .nav-mobile-button .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0; 
   }
   .nav-mobile-button .icon-bar {
     display: block;
-    margin-top: 4px;
+    margin: 4px 0;
     width: 22px;
     height: 2px;
     background: #ffffff;
     border-radius: 1px; 
   }
-
+  template{
+    font-size: 0px;
+  }
   .top{
     background: #111111;
     width: 100%;
