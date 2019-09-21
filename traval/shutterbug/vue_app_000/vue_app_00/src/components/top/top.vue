@@ -1,17 +1,109 @@
 <template>
   <div class="top">
+    <!-- 大屏和超大屏 -->
     <div class="top1">
-
+      <!-- 第一层 -->
+      <div class="top1_center1">
+        <!-- 左边 -->
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+          <a href="#" style="border-radius: 2px;background-color: #474747;color: #eee;padding: 6px 16px;display: flex;flex-direction: column;justify-content: center;">
+            <span style="font-size: 12px;font-weight: 500;letter-spacing: 3px;line-height: 1.5;">RSS</span>
+          </a>
+        </div>
+        <!-- 中间logo -->
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+          <a class="top_logo" href="#">
+            <img src="../../assets/new_fotomen_logo2.png" alt="">
+          </a>
+        </div>
+        <!-- 右边放大镜 -->
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+          <a style="width:18px;height:27px;padding:7px 0;margin-left:14px;display: flex;flex-direction: column;justify-content: center;" href="#">
+            <img style="width:18PX;height:18PX;" src="../../assets/sou(1).png" alt="">
+          </a>
+        </div>
+      </div>
+      <!-- 第二层 -->
+      <div class="top1_center2">
+        <!-- 右边三条横杠 -->
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+          <button class="nav-mobile-button">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- 右边 -->
+          <div></div>
+        </div>
+        <!-- 中间导航栏 -->
+        <div style="display: flex;justify-content:space-between;">
+          <ul style="display: flex;flex-wrap: wrap;margin: 0;padding: 0;list-style: none;">
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">首页</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">新闻</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">观片</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">攻略</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">装备</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">专题</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">订阅</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">商店</a>
+            </li>
+            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">行摄</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">鱼眼</a>
+            </li>
+            <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
+              <a href="#">影像讲堂</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 右边放大镜 -->
+        <div style="visibility: hidden;">
+          <a style="width:18px;height:27px;padding:7px 0;margin-left:14px;display: flex;flex-direction: column;justify-content: center;" href="#">
+            <img style="width:18PX;height:18PX;" src="../../assets/sou(1).png" alt="">
+          </a>
+        </div>
+      </div>
     </div>
+    <!-- 中屏和小屏 -->
     <div class="top2">
-      <button class="nav-mobile-button">
-        <span class="sr-only"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+      <!-- 左边三条横杠 -->
+      <div style="display: flex;flex-direction: column;justify-content: center;">
+        <button class="nav-mobile-button">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- fotomen -->
+      <div style="display: flex;flex-direction: column;justify-content: center;">
+        <a href="#" class="fotomen">FOTOMEN</a>
+      </div>
+      <!-- 右边放大镜 -->
+      <div style="display: flex;flex-direction: column;justify-content: center;">
+        <a style="width:18px;height:27px;padding:7px 0;margin-left:14px;display: flex;flex-direction: column;justify-content: center;" href="#">
+          <img style="width:18PX;height:18PX;" src="../../assets/sou(1).png" alt="">
+        </a>
+      </div>
     </div>
-
   </div>
 </template>
 <script>
@@ -20,36 +112,34 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .nav-mobile-button {
-    position: relative;
-    float: right;
-    padding: 9px 10px;
-    margin-top: 8px;
-    margin-right: 15px;
-    margin-bottom: 8px;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background: #eee; 
+  .top_logo{
+    height: 36.5px;
+    width: 131px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .nav-mobile-button .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0; 
+  .top_logo>img{
+    height: 36.5px;
+    width: 131px;
+    transition: all .3s ease-in-out;
   }
-  .nav-mobile-button .icon-bar {
-    display: block;
-    margin-top: 4px;
-    width: 22px;
-    height: 2px;
-    background: #f65d3f;
-    border-radius: 1px; 
+  .top_logo>img:hover{
+    transform:translateX(0px) rotate(360deg)  skew(0deg,0deg);
+  }
+  .top_ul_li-item+.top_ul_li-item{
+    margin: 0 0 0 32px;
+  }
+  .top_ul_li-item>a{
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .li-item>a::after{
+    margin-left: 8px;
+    font-family: "Icons";
+    font-size: 12px;
+    content: "\e906";
   }
 
   .top{
@@ -58,12 +148,66 @@ export default {
     display: block;
     box-sizing: border-box;
   }
+  // 大屏和超大屏
   .top1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .top1_center1,.top1_center2{
+    display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid #232323;
   }
+  .top1_center1{
+    height: 120px;
+  }
+  .top1_center2{
+    height: 50px;
+  }
+  // 中屏和小屏
   .top2{
     height: 49px;
     border-bottom: 1px solid #232323;
+    display: flex;
+    justify-content: space-between;
+  }
+  // 三条很杠
+  span{
+    margin: 0;
+  }
+  button{
+    margin: 0;
+    padding: 0;
+  }
+  .nav-mobile-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px; 
+  }
+  .nav-mobile-button .sr-only {
+    position: absolute;
+  }
+  .nav-mobile-button .icon-bar {
+    display: block;
+    margin: 4px 0;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 1px; 
+  }
+  // fotomen
+  .fotomen{
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -.015em;
+    line-height: 1;
+    text-transform: none;
+    color: #dadada;
+  }
+  .fotomen:hover{
+    color: #ffffff;
   }
   /*超大屏幕下iframe的高度*/
   @media (min-width: 1120px) {

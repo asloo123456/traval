@@ -35,7 +35,6 @@ import shopping from "./components/shoppingCart/shopping.vue"
 //商品列表
 import product from  "./components/product/product.vue"
 
-
 Vue.use(Router)
 export default new Router({
   routes: [
