@@ -237,7 +237,7 @@
 						<!-- 第三层 -->
 						<div class="footer_div2_div1_div3_div_div">
 							<!-- 左边图片 -->
-							<div class="footer_div2_div1_div3_div_div_div1">
+							<div class="footer_div2_div1_div3_div_div_div1" >
 								<a href="#">
 									<img src="../../assets/3.png" alt="">
 								</a>
@@ -799,12 +799,23 @@ export default {
 		flex-flow: row nowrap;
 	}
 	.footer_div2_div1_div3_div_div_div1{
+		width:90px;
 		height: 90px;
-		padding: 0 15px 0 0;
+		padding: 0 15px 0 0;	
+	}
+	.footer_div2_div1_div3_div_div_div1>a{
+		display: block;
+			width:90px;
+		height: 90px;
+			overflow: hidden;
 	}
 	.footer_div2_div1_div3_div_div_div1>a>img{
 		width: 90px;
 		height: 90px;
+		transition: all 0.2s ease;
+	}
+	.footer_div2_div1_div3_div_div_div1>a>img:hover{
+		transform: scale(1.3);
 	}
 	.footer_div2_div1_div3_div_div_div2{
   	display: flex;

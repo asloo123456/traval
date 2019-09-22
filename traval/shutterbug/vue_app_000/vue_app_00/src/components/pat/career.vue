@@ -73,11 +73,7 @@ export default {
             uname:"哎呦不错哦",
             // timer:1566199863843,
             timer:new Date().getTime(),
-            
-<<<<<<< HEAD
-           
-=======
->>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
+
         }
         setInterval(function(){
             timer:new Date().getTime()
@@ -87,7 +83,6 @@ export default {
     methods: {
         sub(){    
         this.tasks.push(this.task);
-<<<<<<< HEAD
         this.task=""; 
         var d1=getElementById("d1");
         var d2=getElementById("d2");
@@ -99,10 +94,7 @@ export default {
             }
         }
             
-=======
-        this.task="";  
-        console.log(this.list);
->>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
+
         },
 
     },
