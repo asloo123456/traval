@@ -105,3 +105,10 @@ INSERT INTO s_login VALUES(null,15912345678,md5('123'));
 
 
 /*评论   criticism*/   
+CREATE TABLE s_criticism(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  uname VARCHAR(32),
+  e_mail VARCHAR(32),
+  times BIGINT,
+  text VARCHAR(128)
+);

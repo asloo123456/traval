@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import HelloContainer from "./components/HelloWorld.vue"
 // import Home from "./components/weixin/Home.vue"
 
-
 //引入登入
 import login from "./components/shutterbug/login.vue"
 
@@ -20,10 +19,7 @@ import Search_icon from "./components/pat/Search_icon.vue"
 // 评论
 import career from "./components/pat/career.vue"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
 // import sc_Check from "./components/pat/sc_Check.vue"
 
 
@@ -39,10 +35,7 @@ import shopping from "./components/shoppingCart/shopping.vue"
 //商品列表
 import product from  "./components/product/product.vue"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
 Vue.use(Router)
 export default new Router({
   routes: [

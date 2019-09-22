@@ -33,10 +33,10 @@
            <li v-for="(task,i) of tasks"  :key="i">
            <div style="margin-bottom:.3rem"  >
              <img style="background:#fff;border-radius:50%;margin-right:.3rem" src="../../assets/ren.png"/>
-             <b  style="color:#fff;font:.25rem 'HanHei';height:.4rem;display:block" >{{uname}}</b>
-             <p style="color:#595959;height:.4rem;position:relative;margin:0" >{{new Date(timer).toLocaleString()}}</p>
+             <b  style="color:#fff;font:.25rem 'HanHei';height:.4rem;display:block" >{{task.uname}}</b>
+             <p style="color:#595959;height:.4rem;position:relative;margin:0" >{{task.times}}</p>
            </div>
-            {{task}}
+            {{task.text}}
            </li>
         </ul>
         <!--/////-->
@@ -45,67 +45,79 @@
         <form  >
           <div>
           <label style="display:block">你的评论<span style="color:red;font-size:.2rem">*</span></label>
-          <textarea  class="form_control" v-model="task" ></textarea>
+          <textarea class="form_control" v-model="task" ></textarea>
           </div>
-          <div class="div_form" >
-              <div id="d1" style="color:red;font-size:.2rem">名字*</div>
-              <input id="d2" @keydown.13="sub" >
-              <div style="color:red;font-size:.2rem">电子邮箱*</div>
-              <input  @keydown.13="sub" >
-              <div id="d3" style="color:red;font-size:.2rem">网站*</div>
-              <input  @keydown.13="sub" >
+          <div class="div_form" v-for="(item,index) of title" :key="index">
+              <label  v-text="item"></label><span style="color:red;font-size:.2rem">*</span><br>
+              <input v-model="list[index]" @keydown.13="sub">
           </div>
-          <p class="conper"> 
-            <input  type="button" value="发表评论" @click="sub" >
+          <!--div class="div_form">
+              <label style="display:block;">电子邮箱<span style="color:red">*</span></label>
+              <input v-model="task" text="">
+          </div>
+          <div class="div_form">
+              <label style="display:block;">网站</label>
+              <input v-model="task" text="">
+          </div-->
+          <p class="conper" > 
+            <input  type="button" value="发表评论" @click="sub" ref="input">
           </p>
         </form>
         <p class="pst">此站点使用Akismet来减少垃圾评论。<br><a style="color:#fff">了解我们如何处理您的评论数据。</a></p>
     </div>
 </template>
 <script>
+//引入过滤
+import {formatDate} from '../../filters.js';
 export default {
     data(){
         return {     
-            
-            tasks: ["本人热爱摄影 热爱艺术 不过是学语言专业的希望有机会加入做一些创意 根美术 艺术有关的工作","科研人员，业余爱好摄影二十年，对摄影有无上的热爱，单是不想放弃现在的科研共作，想问你们找兼职人员么？"],
+            title:[
+                "名字","电子邮箱","网站"
+            ],
+            tasks: [],
             task:"",
             list:[],
-            uname:"哎呦不错哦",
-            // timer:1566199863843,
+            uname:"",
             timer:new Date().getTime(),
-            
-<<<<<<< HEAD
-           
-=======
->>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
-        }
-        setInterval(function(){
-            timer:new Date().getTime()
-            })
-        
+            // timer:1566199863843,
+            pno:1     
+        } 
     },
     methods: {
-        sub(){    
-        this.tasks.push(this.task);
-<<<<<<< HEAD
-        this.task=""; 
-        var d1=getElementById("d1");
-        var d2=getElementById("d2");
-        var d3=getElementById("d3");
-        var d4=/[\w]+(\.[\w]+)*@[\w]+(\.[\w])+/;
-        if(d1.innerHTML==""){
-            if(d2.innerHTML!=`d4`){
-                this.$toast("错误:请填写必填项目(姓名和电子邮箱地址)");
-            }
+        sub(){
+        //验证邮箱是否正确 
+        var reg=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if(!reg.test(this.list[1])){
+            this.$toast("姓名或邮箱格式不正确");
+            return;
         }
-            
-=======
-        this.task="";  
-        console.log(this.list);
->>>>>>> 78f118aeff512a432757aa57123cdae34f9d519e
+        // 验证成功后输入页面
+        this.tasks.push(this.task);
+        //将用户信息发送给服务器
+        var url="criticism";
+        var list=this.list;
+        var task=this.task;
+        var times=this.timer;
+        var obj={list,task,times};
+        this.axios.get(url,{params:obj}).then(res=>{
+            if(res.data.code==1){
+                this.$toast("评论成功");
+            }
+        })
+        //清空页面信息
         },
-
     },
+    created(){
+        var pno=this.pno;
+        var url="criticisms";
+        this.axios.get(url,{params:pno}).then(res=>{
+            this.tasks=res.data.data;
+            console.log(this.tasks);
+        })
+    },
+        
+
 }
 </script>
 <style lang="scss" scoped>
@@ -124,7 +136,7 @@ export default {
        .form_control{width:5rem;height:3rem;background:#232323;border:0;font-size:.3rem;margin-bottom:.1rem;     &:focus{background-color:#fff;}}
        
        .div_form{
-            margin-bottom:2.3rem;
+        //    margin-bottom:.1rem;
         height:2rem;
            input{
                width:5rem;height:.4rem;background:#232323;border:0;font-size:.3rem;
