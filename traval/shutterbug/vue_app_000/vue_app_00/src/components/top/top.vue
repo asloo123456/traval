@@ -6,9 +6,11 @@
       <div class="top1_center1">
         <!-- 左边 -->
         <div style="display: flex;flex-direction: column;justify-content: center;">
-          <a href="#" style="border-radius: 2px;background-color: #474747;color: #eee;padding: 6px 16px;display: flex;flex-direction: column;justify-content: center;">
-            <span style="font-size: 12px;font-weight: 500;letter-spacing: 3px;line-height: 1.5;">RSS</span>
-          </a>
+          <div class="overflow">
+            <a href="#">
+              <span>RSS<img src="../../assets/wifi.png" alt=""></span>
+            </a>
+          </div>
         </div>
         <!-- 中间logo -->
         <div style="display: flex;flex-direction: column;justify-content: center;">
@@ -42,47 +44,55 @@
             <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">首页</a>
             </li>
-            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
-              <a href="#">新闻</a>
-              <ul>
-                <li><a href="#">展讯</a></li>
-                <li><a href="#">事件</a></li>
-                <li><a href="#">摄论</a></li>
-                <li><a href="#">史话</a></li>
-              </ul>
+            <li class="top_ul_li-item li-item display" style="display: flex;flex-direction: column;justify-content: center;position: relative;">
+              <a href="#">新闻<img src="../../assets/arrow-botton.png" alt=""></a>
+              <div style="position: absolute;top:50px;left:0px;">
+                <ul>
+                  <li><a href="#">展讯</a></li>
+                  <li><a href="#">事件</a></li>
+                  <li><a href="#">摄论</a></li>
+                  <li><a href="#">史话</a></li>
+                </ul>
+              </div>
             </li>
-            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
-              <a href="#">观片</a>
-              <ul>
-                <li><a href="#">人像</a></li>
-                <li><a href="#">纪实</a></li>
-                <li><a href="#">生活</a></li>
-                <li><a href="#">风光</a></li>
-                <li><a href="#">艺术</a></li>
-                <li><a href="#">胶片</a></li>
-                <li><a href="#">静物</a></li>
-                <li><a href="#">黑白</a></li>
-                <li><a href="#">手机摄影</a></li>
-              </ul>
+            <li class="top_ul_li-item li-item display" style="display: flex;flex-direction: column;justify-content: center;position: relative;">
+              <a href="#">观片<img src="../../assets/arrow-botton.png" alt=""></a>
+              <div style="position: absolute;top:50px;left:0px;">
+                <ul>
+                  <li><a href="#">人像</a></li>
+                  <li><a href="#">纪实</a></li>
+                  <li><a href="#">生活</a></li>
+                  <li><a href="#">风光</a></li>
+                  <li><a href="#">艺术</a></li>
+                  <li><a href="#">胶片</a></li>
+                  <li><a href="#">静物</a></li>
+                  <li><a href="#">黑白</a></li>
+                  <li><a href="#">手机摄影</a></li>
+                </ul>
+              </div>
             </li>
-            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
-              <a href="#">攻略</a>
-              <ul>
-                <li><a href="#">零基础</a></li>
-                <li><a href="#">前期</a></li>
-                <li><a href="#">后期</a></li>
-                <li><a href="#">行摄</a></li>
-              </ul>
+            <li class="top_ul_li-item li-item display" style="display: flex;flex-direction: column;justify-content: center;position: relative;">
+              <a href="#">攻略<img src="../../assets/arrow-botton.png" alt=""></a>
+              <div style="position: absolute;top:50px;left:0px;">
+                <ul>
+                  <li><a href="#">零基础</a></li>
+                  <li><a href="#">前期</a></li>
+                  <li><a href="#">后期</a></li>
+                  <li><a href="#">行摄</a></li>
+                </ul>
+              </div>
             </li>
-            <li class="top_ul_li-item li-item" style="display: flex;flex-direction: column;justify-content: center;">
-              <a href="#">装备</a>
-              <ul>
-                <li><a href="#">快递</a></li>
-                <li><a href="#">器材</a></li>
-                <li><a href="#">户外</a></li>
-                <li><a href="#">座驾</a></li>
-                <li><a href="#">编辑推荐</a></li>
-              </ul>
+            <li class="top_ul_li-item li-item display" style="display: flex;flex-direction: column;justify-content: center;position: relative;">
+              <a href="#">装备<img src="../../assets/arrow-botton.png" alt=""></a>
+              <div style="position: absolute;top:50px;left:0px;">
+                <ul>
+                  <li><a href="#">快递</a></li>
+                  <li><a href="#">器材</a></li>
+                  <li><a href="#">户外</a></li>
+                  <li><a href="#">座驾</a></li>
+                  <li><a href="#">编辑推荐</a></li>
+                </ul>
+              </div>
             </li>
             <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">专题</a>
@@ -93,12 +103,14 @@
             <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">商店</a>
             </li>
-            <li class="top_ul_li-item li-item display5" style="display: flex;flex-direction: column;justify-content: center;">
-              <a href="#">行摄</a>
-              <ul>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">杂志版面</a></li>
-              </ul>
+            <li class="top_ul_li-item li-item display" style="display: flex;flex-direction: column;justify-content: center;position: relative;">
+              <a href="#">行摄<img src="../../assets/arrow-botton.png" alt=""></a>
+              <div style="position: absolute;top:50px;left:0px;">
+                <ul>
+                  <li><a href="#">作品</a></li>
+                  <li><a href="#">杂志版面</a></li>
+                </ul>
+              </div>
             </li>
             <li class="top_ul_li-item" style="display: flex;flex-direction: column;justify-content: center;">
               <a href="#">鱼眼</a>
@@ -146,6 +158,37 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.overflow{
+  overflow: hidden;
+  height: 32px;
+  width: 68px;
+  background-color: #474747;
+  border-radius: 2px;
+  a{
+    span{
+      display: block;
+      color: #eee;
+      padding: 7px 16px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 6px;
+      line-height: 1.5;
+      transition: all .2s ease;
+      img{
+        display: block;
+        padding: 14px 8px;
+        height: 18px;
+        width: 18px;
+      }
+    }
+    span:hover{
+      background: #141414;
+      transform: translateY(-32px);
+    }
+  }
+
+}
+
   // logo a标签
   .top_logo{
     height: 36.5px;
@@ -173,13 +216,50 @@ export default {
     font-size: 13px;
     font-weight: 600;
   }
-  .li-item>a::after{
-    margin-left: 8px;
-    font-family: "Icons";
-    font-size: 12px;
-    content: "\e906";
+  .li-item>a>img{
+    height: 12px;
+    width: 12px;
+    margin: 0 0 0 8px;
   }
-
+  // 隐藏导航栏
+  .display{
+    div{
+      display: none;
+    }
+  }
+  // 悬停a标签出现导航栏
+  .display:hover{
+    div{
+      display: inline;
+      ul{
+        font-size: 0px;
+        list-style: none;
+        background: #1e1e1e;
+        border: 1px solid #1e1e1e;
+        margin: 0;
+        padding: 16px 0;
+        li{
+          box-sizing: content-box;
+          margin: 0 16px;
+          width: 200px;
+          line-height: 1.5;
+          border-bottom: 1px solid #2a2a2a;
+          a{
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            transition: 0.2s ease all;
+          }
+        }
+      }
+    }
+  }
+  // 悬停出现的导航栏中的a标签悬停效果
+  .display>div>ul>li>a:hover{
+    transform: translateX(10px);
+  }
   .top{
     background: #111111;
     width: 100%;

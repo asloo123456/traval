@@ -80,9 +80,18 @@ export default {
             list:[],
             uname:"",
             timer:new Date().getTime(),
+<<<<<<< HEAD
             // timer:1566199863843,
             pno:1     
         } 
+=======
+
+        }
+        setInterval(function(){
+            timer:new Date().getTime()
+            })
+        
+>>>>>>> ec10d95fc9a01562d8168be079526317bb0239e0
     },
     methods: {
         sub(){
@@ -94,6 +103,7 @@ export default {
         }
         // 验证成功后输入页面
         this.tasks.push(this.task);
+<<<<<<< HEAD
         //将用户信息发送给服务器
         var url="criticism";
         var list=this.list;
@@ -106,6 +116,20 @@ export default {
             }
         })
         //清空页面信息
+=======
+        this.task=""; 
+        var d1=getElementById("d1");
+        var d2=getElementById("d2");
+        var d3=getElementById("d3");
+        var d4=/[\w]+(\.[\w]+)*@[\w]+(\.[\w])+/;
+        if(d1.innerHTML==""){
+            if(d2.innerHTML!=`d4`){
+                this.$toast("错误:请填写必填项目(姓名和电子邮箱地址)");
+            }
+        }
+            
+
+>>>>>>> ec10d95fc9a01562d8168be079526317bb0239e0
         },
     },
     created(){
