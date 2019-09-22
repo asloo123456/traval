@@ -6,9 +6,11 @@
       <div class="top1_center1">
         <!-- 左边 -->
         <div style="display: flex;flex-direction: column;justify-content: center;">
-          <a href="#" style="border-radius: 2px;background-color: #474747;color: #eee;padding: 6px 16px;display: flex;flex-direction: column;justify-content: center;">
-            <span style="font-size: 12px;font-weight: 500;letter-spacing: 3px;line-height: 1.5;">RSS</span>
-          </a>
+          <div class="overflow">
+            <a href="#">
+              <span>RSS<img src="../../assets/wifi.png" alt=""></span>
+            </a>
+          </div>
         </div>
         <!-- 中间logo -->
         <div style="display: flex;flex-direction: column;justify-content: center;">
@@ -156,6 +158,37 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.overflow{
+  overflow: hidden;
+  height: 32px;
+  width: 68px;
+  background-color: #474747;
+  border-radius: 2px;
+  a{
+    span{
+      display: block;
+      color: #eee;
+      padding: 7px 16px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 6px;
+      line-height: 1.5;
+      transition: all .2s ease;
+      img{
+        display: block;
+        padding: 14px 8px;
+        height: 18px;
+        width: 18px;
+      }
+    }
+    span:hover{
+      background: #141414;
+      transform: translateY(-32px);
+    }
+  }
+
+}
+
   // logo a标签
   .top_logo{
     height: 36.5px;
