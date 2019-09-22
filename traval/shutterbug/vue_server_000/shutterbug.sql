@@ -102,3 +102,6 @@ CREATE TABLE s_login(
 );
 /**用户信息**/
 INSERT INTO s_login VALUES(null,15912345678,md5('123'));
+
+
+/*评论   criticism*/   

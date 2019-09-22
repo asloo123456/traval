@@ -94,6 +94,17 @@ server.get("/product",(req,res)=>{
     res.send({code:1,msg:"查询成功",data:result});
   })
   })
+
+  //功能三 评论
+server.get("/criticism",(req,res)=>{
+  // 获取名称和邮箱
+  var uname=req.query.uname;   //名称
+  var e_mail=req.query.e_mail;  //邮箱
+  var text=req.query.text;     ///文字
+  2//判断当前是否填入邮箱
+  
+})
+
   
 
 
