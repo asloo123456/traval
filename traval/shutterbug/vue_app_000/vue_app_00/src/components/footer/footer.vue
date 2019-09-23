@@ -2,8 +2,9 @@
 	<div class="bottom">
 		<!-- 第一部分：广告 -->
 		<div class="footer_div1">
-			<div class="footer_div1_div">
+			<div class="footer_div1_div" v-show="show" >	
 				<div class="footer_div1_div_div">
+				
 					<!-- 京东图标 -->
 					<div class="footer_div1_div_div_div1">
 						<img src="../../assets/aea226a9be6fddee.jpg" alt="">
@@ -36,7 +37,7 @@
 						  </mt-tab-container-item>
 						 </mt-tab-container>
 						 <!--第三个-->
-						 <mt-tab-container class="one" v-model="active">
+						 <mt-tab-container class="one" v-model="active" >
 						  <mt-tab-container-item class="ones" id="tab3">
                           <a>
 					       <img src="../../assets/1f205ea2c708681e.jpg">
@@ -97,7 +98,8 @@
 						   <div class="bag" @mousemove="actives='tab6'"><a>平板电视</a></div>
 						 </div>
 					</div>
-				</div>
+					<button @click="del" class="my_del">X</button>
+				</div>				
 			</div>
 		</div>
 		<!-- 第二部分和第三部分 -->
@@ -280,13 +282,13 @@
 					<div class="footer_div2_div2_div2">
 						<ul>
 							<li class="footer_ul_li-item">
-								<a href="#">关于我们</a>
+								<a href="http://127.0.0.1:5050/#/career">关于我们</a>
 							</li>
 							<li class="footer_ul_li-item">
-								<a href="#">联系我们</a>
+								<a href="http://127.0.0.1:5050/#/career">联系我们</a>
 							</li>
 							<li class="footer_ul_li-item">
-								<a href="#">工作机会</a>
+								<a href="http://127.0.0.1:5050/#/career">工作机会</a>
 							</li>
 						</ul>
 					</div>
@@ -315,11 +317,14 @@ export default {
 	data() {
 		return {
 			active:"tab1",
-			actives:"tab4"
+			actives:"tab4",
+			show:true
 		}
 	},
 	methods: {
-		
+		del(){
+			this.show=false;
+		}
 	},
 }
 </script>
@@ -336,6 +341,15 @@ export default {
 		text-align: left;
 	}
 	/*超大屏幕下iframe的高度*/
+	//隐藏广告
+	.my_del{
+		position:absolute;
+		left:97%;
+		top:-5%;
+		background:#dddfff;;
+		color:#fff;
+		border:none;
+	}
 	@media (min-width: 1120px) {
 		.footer_div1_div{
 			width: 780px;
