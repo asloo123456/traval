@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import HelloContainer from "./components/HelloWorld.vue"
 // import Home from "./components/weixin/Home.vue"
 
-
 //引入登入
 import login from "./components/shutterbug/login.vue"
 
@@ -19,6 +18,7 @@ import Search from "./components/pat/Search.vue"
 import Search_icon from "./components/pat/Search_icon.vue"
 // 评论
 import career from "./components/pat/career.vue"
+
 
 // import sc_Check from "./components/pat/sc_Check.vue"
 

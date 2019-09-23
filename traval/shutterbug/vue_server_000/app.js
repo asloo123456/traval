@@ -98,11 +98,38 @@ server.get("/product",(req,res)=>{
   //功能三 评论
 server.get("/criticism",(req,res)=>{
   // 获取名称和邮箱
-  var uname=req.query.uname;   //名称
-  var e_mail=req.query.e_mail;  //邮箱
-  var text=req.query.text;     ///文字
+  var uname=req.query.list[0];   //名称
+  var e_mail=req.query.list[1];  //邮箱
+  var text=req.query.task;     ///文字
+  var times=req.query.times;
   2//判断当前是否填入邮箱
-  
+  var sql="INSERT INTO s_criticism SET uname=?,e_mail=?,times=?,text=?";
+  pool.query(sql,[uname,e_mail,times,text],(err,result)=>{
+    if(err)throw err;
+    res.send({code:1,msg:"插入成功"});
+  })
+})
+server.get("/criticisms",(req,res)=>{
+  var pno=req.query.pno;
+  var ps=req.query.pageSize;
+    if(!pno){//如果没传
+      pno=1;
+    }
+    if(!ps){
+     ps=10;
+    }
+var sql="SELECT uname,times,text FROM s_criticism ORDER BY id DESC LIMIT ?,?"
+    //第一个问号的值要算出来 //第二个问号的值不变，要几行就几行
+  var offset= (pno-1)*ps;//起始记录数
+    //脚手架传过来的都是字符串，可是第二个问号如果传的不是数字会报错，所以要转为整形
+  ps=parseInt(ps); //行数
+//5：发送sql语句
+   //传入页码和页大小
+pool.query(sql,[offset,ps],(err,result)=>{
+  //6：获取返回结果发送客户端
+  if(err)throw err; 
+  res.send({code:1,msg:"查询成功",data:result});
+})
 })
 
   
