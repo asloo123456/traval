@@ -19,10 +19,7 @@ import Search_icon from "./components/pat/Search_icon.vue"
 // 评论
 import career from "./components/pat/career.vue"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> ec10d95fc9a01562d8168be079526317bb0239e0
 // import sc_Check from "./components/pat/sc_Check.vue"
 
 

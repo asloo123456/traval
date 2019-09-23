@@ -112,3 +112,5 @@ CREATE TABLE s_criticism(
   times BIGINT,
   text VARCHAR(128)
 );
+INSERT INTO s_criticism VALUES(null,"lily","zhangyy@sysychina.com",1569378764535,"本人热爱摄影 热爱艺术 不过是学语言专业的 希望有机会加入做一些创意 跟美学 艺术有关的工作");
+INSERT INTO s_criticism VALUES(null,"AgX吃饱了没事干","zhangyy@sysychina.com",1569142560103,"您好~我想应聘实习编辑，但是简历投递遇到了问题，公布的邮箱地址我发出后均被退回，报错内容'收件人（zhangyy@sysychina.com）所属域名不存在，邮件无法送达' 求助。。。。。");

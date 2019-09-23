@@ -1,4 +1,6 @@
+// 过滤时间毫秒数
 export function formatDate (date, fmt) {
+    //RegExp.$1 指的是与正则表达式匹配的第一个 子匹配(以括号为标志)字符串
     if (/(y+)/.test(fmt)) {
      fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
     }

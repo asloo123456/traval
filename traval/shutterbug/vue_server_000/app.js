@@ -116,9 +116,9 @@ server.get("/criticisms",(req,res)=>{
       pno=1;
     }
     if(!ps){
-     ps=5;
+     ps=10;
     }
-var sql="SELECT uname,times,text FROM s_criticism LIMIT ?,?"
+var sql="SELECT uname,times,text FROM s_criticism ORDER BY id DESC LIMIT ?,?"
     //第一个问号的值要算出来 //第二个问号的值不变，要几行就几行
   var offset= (pno-1)*ps;//起始记录数
     //脚手架传过来的都是字符串，可是第二个问号如果传的不是数字会报错，所以要转为整形
