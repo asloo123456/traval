@@ -1,7 +1,7 @@
 <template>
   <div class="top">
     <!-- 大屏和超大屏 -->
-    <div class="top1">
+    <div class="top1"  v-show="my_show" @scroll="sroll">
       <!-- 第一层 -->
       <div class="top1_center1">
         <!-- 左边 -->
@@ -154,7 +154,18 @@
 </template>
 <script>
 export default {
-  
+  data() {
+    return {
+      my_show:false,
+    }
+  },
+  methods: {
+    sroll(){
+
+      this.my_show=true
+    }
+  },
+
 }
 </script>
 <style lang="scss" scoped>
@@ -263,6 +274,7 @@ export default {
   .top{
     background: #111111;
     width: 100%;
+    height: 3000px;
     display: block;
     box-sizing: border-box;
   }
