@@ -1,5 +1,7 @@
 <template >
 <div class="coniner">
+    <my-header></my-header>
+    <carousel></carousel>
     <!--标题图片-->
     <div class="d1">
       <div id="d2" class="d2_top">
@@ -65,8 +67,7 @@
            <div class="dian_s3"><span class="sa"></span></div>
            <div class="dian_s4"><span class="sa"></span></div>
            <div class="dian_s5"><span class="sa"></span></div>
-           <div class="dian_s6"><span class="sa"></span></div> 
-            
+           <div class="dian_s6"><span class="sa"></span></div>      
         </div>
         
       </div>
@@ -132,10 +133,16 @@
             <li :class="pno==pcount?'disabled':''">下一页</li>
           </ul>
     </div>
+    <my-footer></my-footer>
 </div>    
 </template>
 <script>
+// 引入子组件
+import myHeader from "../top/top.vue"
+import myFooter from "../footer/footer.vue"
+import carousel from "../carousel/Carousel.vue"
 export default {
+  inject: ['reload'],
   data() {
     return {
       pcount:3,
@@ -146,9 +153,6 @@ export default {
   created() {
      this.loadMore();
    },
-   updated() {
-     this.loadMore();   
-   },
   methods:{
     change(e){
       if(e.target.nodeName=="LI"){
@@ -157,16 +161,19 @@ export default {
           if(this.pno>1){
             this.pno--;
             window.scroll(0,0);
+            this.loadMore();
           }
           break;
           case "下一页":
           if(this.pno<this.pcount){
             this.pno++;
              window.scroll(0,0);
+             this.loadMore();
           }
           break;
           default:
-          this.pno=parseInt(e.target.innerHTML)
+          this.pno=parseInt(e.target.innerHTML);
+          this.loadMore();
         }
       }
     },
@@ -191,6 +198,9 @@ export default {
     props:{
         // img3:{default:""},
         // title:{type:String,default:""},
+    },
+    components:{
+      myHeader,myFooter,carousel
     }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="top">
     <!-- 大屏和超大屏 -->
-    <div class="top1"  v-show="my_show" @scroll="sroll">
+    <div class="top1">
       <!-- 第一层 -->
       <div class="top1_center1">
         <!-- 左边 -->
@@ -156,14 +156,11 @@
 export default {
   data() {
     return {
-      my_show:false,
+
     }
   },
   methods: {
-    sroll(){
 
-      this.my_show=true
-    }
   },
 
 }
@@ -216,7 +213,7 @@ export default {
   }
   // 鼠标悬停logo图片旋转
   .top_logo>img:hover{
-    transform:translateX(0px) rotate(360deg)  skew(0deg,0deg);
+    transform:translateX(0px) rotate(360deg);
   }
   // 导航栏
   .top_ul_li-item+.top_ul_li-item{
@@ -274,7 +271,7 @@ export default {
   .top{
     background: #111111;
     width: 100%;
-    height: 3000px;
+    // height: 3000px;
     display: block;
     box-sizing: border-box;
   }
