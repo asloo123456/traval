@@ -18,11 +18,11 @@
           <li  v-for="(item,index) in menuList" :key="index" classs="c">
             <div class="oneMenu"   @click="showToggle(item,index)">
               <a href="">{{item.name}}</a>
-              
+              <img class="images" src="../assets/arrow-botton.png">
             </div>
-            <ul v-show="item.isSubShow"  @mouseover="mouseOver">
-              <li v-for="(subItem,i) in item.subItems" :key="i" :class="pro==i?'my_class':''"   >
-                <a href="" class="oneMenuChild" v-model:="it">{{subItem.name}}</a>
+            <ul v-show="item.isSubShow"  >
+              <li v-for="(subItem,i) in item.subItems" :key="i"    >
+                <a href="" class="oneMenuChild" >{{subItem.name}}</a>
                 
               </li>
             </ul>
@@ -123,23 +123,6 @@ export default {
  
     },
     methods:{
-      // change(e){
-      //   if(e.target.nodeName=="LI"){
-      //     this.pno=parseInt(
-      //       e.target.
-      //     )
-      //   }
-      // },
-      //鼠标移入显示
-       mouseOver(e){
-         if(e.target.nodeName=="LI"){
-           if(this.menuList.subItems.index){
-              this.my_class.back_image=true;
-           }
-           
-          
-         }    
-       },
       // 点击展开折叠菜单事件
       showToggle:function(item,ind){
         this.menuList.forEach(i => {
@@ -151,6 +134,8 @@ export default {
         item.isSubShow = !item.isSubShow;
         console.log(item.name)
       },
+      
+      
       s:function(e){
         if(e.target.nodeName=="IMG"){
          
@@ -236,10 +221,15 @@ export default {
             align-items: center;
             -webkit-box-pack:justify;
             justify-content: space-between;
-            width:100%;  
+            width:100%;
+            // &:focus.images{transition:1s rotateY(360deg)}
             a{
             color:#bdbdbd;
-            text-decoration: none;}
+            text-decoration: none;
+            
+            &:hover{color:#fff;}  
+            }
+            .images{margin:0;width:.9rem;height:.9rem;}
             img{
               z-index:9999;
               width: 1.25rem;
@@ -271,6 +261,7 @@ export default {
             list-style: none;
             color:#bdbdbd;
             text-decoration: none;
+            &:hover{color:#fff;}
           }
            }
             

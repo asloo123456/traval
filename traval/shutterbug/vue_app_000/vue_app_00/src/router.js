@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import HelloContainer from "./components/HelloWorld.vue"
 // import Home from "./components/weixin/Home.vue"
 
-
 //引入登入
 import login from "./components/shutterbug/login.vue"
 
@@ -24,6 +23,7 @@ import souFen from "./components/souFen.vue"
 import shopping from "./components/shoppingCart/shopping.vue"
 //商品列表
 import product from  "./components/product/product.vue"
+
 
 Vue.use(Router)
 export default new Router({

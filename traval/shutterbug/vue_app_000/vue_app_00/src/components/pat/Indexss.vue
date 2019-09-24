@@ -128,7 +128,7 @@
     <div id="app" class="fen">
           <ul @click="change"> 
             <li :class="pno==1?'disabled':''">上一页</li>
-            <li  v-for="i of pcount" :key="i" :class="pno==i?'active':''" :data-i="i" ref="li">{{i}}</li>
+            <li  v-for="i of pcount" :key="i" :class="pno==i?'active':''" :data-i="i">{{i}}</li>
             <li :class="pno==pcount?'disabled':''">下一页</li>
           </ul>
     </div>
@@ -147,8 +147,7 @@ export default {
      this.loadMore();
    },
    updated() {
-     this.loadMore();
-    
+     this.loadMore();   
    },
   methods:{
     change(e){
@@ -394,7 +393,7 @@ export default {
         display:flex;
          background:#111;
          width:100%;
-          height:5rem;
+          height:5.5rem;
           padding:52px 0;
         // position:relative;
         .d2_2{
@@ -415,18 +414,18 @@ export default {
              width:100%;
              height:400px;
            .s1{
-             width:3rem;
+             width:3.5rem;
              height:4rem;
             //  justify-content:space-around;
             // text-align:center;
             
 
           .imgf{
-            width:33.33%;
+            width:3.5rem;
             
         //    bottom:10%;
         //    a{width:6.5rem;height:6.5rem;}
-           a img{width:3rem;height:3rem;}
+           a img{width:3.5rem;height:3rem;}
            };
            .texts{//bottom:10%;
            
@@ -435,7 +434,7 @@ export default {
            };
            .fonts{
                display:flex;
-               width:300px;
+               width:3.5rem;
                height:18px;
                margin-top:.1rem;
                span{font-size:.07rem;margin:0};
@@ -446,19 +445,19 @@ export default {
                };
             };
             .s1s{
-               width:3rem;
+               width:3.5rem;
                height:4rem;
                margin-left:.2rem;
                .imgs{
               width:33.33%;
-              a img{width:3rem;height:3rem;}
+              a img{width:3.5rem;height:3rem;}
             };
             .textss{
               h2{color:#ddd;margin:0;font-size:.1rem;}
             };
             .fontss{
                display:flex;
-               width:300px;
+               width:3.5rem;
                height:18px;
                margin-top:.1rem;
                span{font-size:.07rem;margin:0};
@@ -474,6 +473,7 @@ export default {
                 height:.2rem;display:flex;
                 justify-content:center;
                 align-items:center;
+                padding-top:.2rem;
                 .dian_s3,.dian_s4,.dian_s5,.dian_s6,{display:none;}
                 .dian_s1,.dian_s2{
                     // border-radius:1rem;
@@ -513,19 +513,19 @@ export default {
           //  display:flex;
             align-items:center;
           //  justify-content:center;
-           width:300px;
+           width:3.5rem;
            height:6rem;
           //  margin:0 .08rem;
            opacity:0.9;
            flex-wrap:wrap;
            a{height:300px;display:block;margin:.8rem 0 0 0;}
-           .imgtow{width:300px;height:300px;cursor:pointer;}
-           .text_tow{font-size:21px;color:#ddd;width:300px;}
+           .imgtow{width:3.5rem;height:300px;cursor:pointer;}
+           .text_tow{font-size:21px;color:#ddd;width:3.5rem;}
            .div_tow{
                display:flex;
                 align-items:center;
               //  justify-content:center;
-               width:100%;
+               width:3.5rem;
                height:.3rem;
             //    margin:0px 0;
                span{font:.1rem 'HanHei';margin:0}
@@ -540,14 +540,14 @@ export default {
           //  display:flex;
             align-items:center;
           //  justify-content:center;
-           width:300px;
+           width:3.5rem;
            height:6rem;
            margin-left:.2rem;
            opacity:0.9;
            flex-wrap:wrap;
            a{height:300px;display:block;margin:.8rem 0 0 0;}
-           .imgtows{width:300px;height:300px;cursor:pointer;}
-           .text_tows{font-size:21px;color:#ddd;width:300px;}
+           .imgtows{width:3.5rem;height:300px;cursor:pointer;}
+           .text_tows{font-size:21px;color:#ddd;width:3.5rem;}
            .div_tows{
                display:flex;
                 align-items:center;
@@ -659,7 +659,7 @@ export default {
             };
             .fontss{
                display:flex;
-               width:300px;
+               width:3.5rem;
                height:18px;
                margin-top:.15rem;
                span{font-size:.07rem;margin:0};
@@ -677,6 +677,7 @@ export default {
                 height:.2rem;display:flex;
                 justify-content:center;
                 align-items:center;
+                padding-top:.2rem;
                 .dian_s4,.dian_s5,.dian_s6,{display:none;}
                 .dian_s1,.dian_s2,.dian_s3{
                     // border-radius:1rem;

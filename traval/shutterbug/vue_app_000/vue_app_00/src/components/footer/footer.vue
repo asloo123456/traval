@@ -2,8 +2,9 @@
 	<div class="bottom">
 		<!-- 第一部分：广告 -->
 		<div class="footer_div1">
-			<div class="footer_div1_div">
+			<div class="footer_div1_div" v-show="show" >	
 				<div class="footer_div1_div_div">
+				
 					<!-- 京东图标 -->
 					<div class="footer_div1_div_div_div1">
 						<img src="../../assets/aea226a9be6fddee.jpg" alt="">
@@ -36,7 +37,7 @@
 						  </mt-tab-container-item>
 						 </mt-tab-container>
 						 <!--第三个-->
-						 <mt-tab-container class="one" v-model="active">
+						 <mt-tab-container class="one" v-model="active" >
 						  <mt-tab-container-item class="ones" id="tab3">
                           <a>
 					       <img src="../../assets/1f205ea2c708681e.jpg">
@@ -97,7 +98,8 @@
 						   <div class="bag" @mousemove="actives='tab6'"><a>平板电视</a></div>
 						 </div>
 					</div>
-				</div>
+					<button @click="del" class="my_del">X</button>
+				</div>				
 			</div>
 		</div>
 		<!-- 第二部分和第三部分 -->
@@ -118,7 +120,11 @@
 					</div>
 					<!-- 按钮 -->
 					<div class="footer_div2_div1_div1_div1">
-						<a href="#">了解更多</a>
+						<div>
+							<a href="#">
+								<span>了解更多<img src="../../assets/arrow-right.png" alt=""></span>
+							</a>
+						</div>
 					</div>
 				</div>
 				<!-- 中间 -->
@@ -237,7 +243,7 @@
 						<!-- 第三层 -->
 						<div class="footer_div2_div1_div3_div_div">
 							<!-- 左边图片 -->
-							<div class="footer_div2_div1_div3_div_div_div1">
+							<div class="footer_div2_div1_div3_div_div_div1" >
 								<a href="#">
 									<img src="../../assets/3.png" alt="">
 								</a>
@@ -276,13 +282,13 @@
 					<div class="footer_div2_div2_div2">
 						<ul>
 							<li class="footer_ul_li-item">
-								<a href="#">关于我们</a>
+								<a href="http://127.0.0.1:5050/#/career">关于我们</a>
 							</li>
 							<li class="footer_ul_li-item">
-								<a href="#">联系我们</a>
+								<a href="http://127.0.0.1:5050/#/career">联系我们</a>
 							</li>
 							<li class="footer_ul_li-item">
-								<a href="#">工作机会</a>
+								<a href="http://127.0.0.1:5050/#/career">工作机会</a>
 							</li>
 						</ul>
 					</div>
@@ -311,16 +317,18 @@ export default {
 	data() {
 		return {
 			active:"tab1",
-			actives:"tab4"
+			actives:"tab4",
+			show:true
 		}
 	},
 	methods: {
-		
+		del(){
+			this.show=false;
+		}
 	},
 }
 </script>
 <style  lang="scss" scoped>
-
   .bottom{
 		margin: 0;
 		background: #111111;
@@ -333,6 +341,15 @@ export default {
 		text-align: left;
 	}
 	/*超大屏幕下iframe的高度*/
+	//隐藏广告
+	.my_del{
+		position:absolute;
+		left:97%;
+		top:-5%;
+		background:#dddfff;;
+		color:#fff;
+		border:none;
+	}
 	@media (min-width: 1120px) {
 		.footer_div1_div{
 			width: 780px;
@@ -677,11 +694,6 @@ export default {
 		top:-25%;
 		left:-55%;
 	}
-	
-    
-
-
-
 	.footer_div2{
 		color: #a0a0a0;
 		padding: 0 20px;
@@ -703,20 +715,37 @@ export default {
 	.footer_div2_div1_div1_div1{
 		display: flex;
 		justify-content: center;
-	}
-	.footer_div2_div1_div1_div1>a{
-		padding: 6px 16px;
-		margin: 24px 0 0;
-		background-color: #242424;
-		color: #a0a0a0;
-		font-size: 11px;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-	}
-	.footer_div2_div1_div1_div1>a:hover{
-		background: #141414;
+		div{
+			margin: 24px 0 0;
+  		width: 94px;
+			height: 32px;
+			border-radius: 2px;
+			background-color: #242424;
+			overflow: hidden;
+			a{
+				span{
+      		display: block;
+      		color: #eee;
+      		padding: 7px 16px;
+					margin: 0;
+      		font-size: 12px;
+      		font-weight: bold;
+      		letter-spacing: 3px;
+      		line-height: 1.5;
+      		transition: all .2s ease;
+					img{
+        		display: block;
+        		padding: 15px 15px;
+        		height: 15px;
+        		width: 27px;
+					}
+				}
+				span:hover{
+					background: #141414;
+					transform: translateY(-32px);
+				}
+			}
+		}
 	}
 	a{
 		color: #fff;
@@ -799,12 +828,23 @@ export default {
 		flex-flow: row nowrap;
 	}
 	.footer_div2_div1_div3_div_div_div1{
+		width:90px;
 		height: 90px;
-		padding: 0 15px 0 0;
+		padding: 0 15px 0 0;	
+	}
+	.footer_div2_div1_div3_div_div_div1>a{
+		display: block;
+		width:90px;
+		height: 90px;
+		overflow: hidden;
 	}
 	.footer_div2_div1_div3_div_div_div1>a>img{
 		width: 90px;
 		height: 90px;
+		transition: all 0.2s ease;
+	}
+	.footer_div2_div1_div3_div_div_div1>a>img:hover{
+		transform: scale(1.3);
 	}
 	.footer_div2_div1_div3_div_div_div2{
   	display: flex;

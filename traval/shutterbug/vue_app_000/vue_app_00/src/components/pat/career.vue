@@ -33,10 +33,10 @@
            <li v-for="(task,i) of tasks"  :key="i">
            <div style="margin-bottom:.3rem"  >
              <img style="background:#fff;border-radius:50%;margin-right:.3rem" src="../../assets/ren.png"/>
-             <b  style="color:#fff;font:.25rem 'HanHei';height:.4rem;display:block" >{{uname}}</b>
-             <p style="color:#595959;height:.4rem;position:relative;margin:0" >{{new Date(timer).toLocaleString()}}</p>
+             <b  style="color:#fff;font:.25rem 'HanHei';height:.4rem;display:block" >{{task.uname}}</b>
+             <p style="color:#595959;height:.4rem;position:relative;margin:0" >{{task.times | formatDate}}</p>
            </div>
-            {{task}}
+            {{task.text}}
            </li>
         </ul>
         <!--/////-->
@@ -49,51 +49,75 @@
           </div>
           <div class="div_form" v-for="(item,index) of title" :key="index">
               <label  v-text="item"></label><span style="color:red;font-size:.2rem">*</span><br>
-              <input v-model="list[index]" @keydown.13="sub" >
+              <input v-model="list[index]" @keydown.13="sub">
           </div>
-          <!--div class="div_form">
-              <label style="display:block;">电子邮箱<span style="color:red">*</span></label>
-              <input v-model="task" text="">
-          </div>
-          <div class="div_form">
-              <label style="display:block;">网站</label>
-              <input v-model="task" text="">
-          </div-->
-          <p class="conper"> 
-            <input  type="button" value="发表评论" @click="sub" >
+
+          <p class="conper" > 
+            <input  type="button" value="发表评论" @click="sub" ref="input">
           </p>
         </form>
         <p class="pst">此站点使用Akismet来减少垃圾评论。<br><a style="color:#fff">了解我们如何处理您的评论数据。</a></p>
     </div>
 </template>
 <script>
+//引入过滤
+import {formatDate} from '../../filters.js';
 export default {
+    inject: ['reload'], // 引入刷新方法
+    // 使用过滤器
+    filters: {
+        formatDate(time) {
+        var date = new Date(time); 
+        return formatDate(date, 'yyyy年MM月dd日 hh:mm');
+        }
+    },
     data(){
         return {     
             title:[
                 "名字","电子邮箱","网站"
             ],
-            tasks: ["本人热爱摄影 热爱艺术 不过是学语言专业的希望有机会加入做一些创意 根美术 艺术有关的工作","科研人员，业余爱好摄影二十年，对摄影有无上的热爱，单是不想放弃现在的科研共作，想问你们找兼职人员么？"],
+            tasks: [],
             task:"",
             list:[],
-            uname:"哎呦不错哦",
-            // timer:1566199863843,
             timer:new Date().getTime(),
-            
-        }
-        setInterval(function(){
-            timer:new Date().getTime()
-            })
-        
+            // timer:1566199863843,
+            pno:1     
+        } 
     },
     methods: {
-        sub(){    
+        sub(){
+        //验证邮箱是否正确 
+        var reg=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if(!reg.test(this.list[1])){
+            this.$toast("姓名或邮箱格式不正确");
+            return;
+        }
+        // 验证成功后输入页面
         this.tasks.push(this.task);
-        this.task="";  
-        console.log(this.list);
+        //将用户信息发送给服务器
+        var url="criticism";
+        var list=this.list;
+        var task=this.task;
+        var times=this.timer;
+        var obj={list,task,times};
+        this.axios.get(url,{params:obj}).then(res=>{
+            if(res.data.code==1){
+                this.$toast("评论成功");
+            }
+        })
+        //清空页面信息
+        this.reload() ;
         },
-
     },
+    // 加载数据
+    created(){
+        var pno=this.pno;
+        var url="criticisms";
+        this.axios.get(url,{params:pno}).then(res=>{
+            // 将分页查询后的信息翻转
+            this.tasks=res.data.data.reverse();
+        })
+    },   
 }
 </script>
 <style lang="scss" scoped>
