@@ -374,11 +374,11 @@ export default {
               .disabled{/*overflow:hidden;*/opacity:0;}
               }    
       }
-};   
+ };   
 
 
  // 大屏幕↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-@media screen and (min-width: 1001px)  {
+ @media screen and (min-width: 1001px)  {
       .d1{
         background:#000;
         display:flex;
@@ -591,11 +591,11 @@ export default {
             .disabled{/*overflow:hidden;*/opacity:0;}
           }    
       };
-};
+ };
    
 
     // 中屏幕↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-@media screen and (max-width: 1000px) and (min-width: 767px){
+ @media screen and (max-width: 1000px) and (min-width: 767px){
      .d1{
        display:flex;
        align-items:center;
@@ -794,6 +794,6 @@ export default {
               .disabled{/*overflow:hidden;*/opacity:0;}
               }    
       };
-};
+ };
 };
 </style>
