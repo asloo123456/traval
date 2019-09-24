@@ -14,18 +14,8 @@ import footer from "./components/footer/footer.vue"
 
 // 引入中间部分
 import Indexss from "./components/pat/Indexss.vue"
-// 搜索
-import Search from "./components/pat/Search.vue"
-import Search_icon from "./components/pat/Search_icon.vue"
 // 评论
 import career from "./components/pat/career.vue"
-
-// import sc_Check from "./components/pat/sc_Check.vue"
-
-
-
-
-// import sc_Check from "./components/pat/sc_Check.vue"
 
 
 //手风琴
@@ -44,12 +34,8 @@ export default new Router({
     {path:'/login',component:login},
     // 中间
     {path:'/Indexss',component:Indexss},
-    // 搜索
-    {path:'/Search',component:Search},
-    {path:'/Search_icon',component:Search_icon},
     // 评论
     {path:'/career',component:career},
-    // {path:'/sc_Check',component:sc_Check},
     //头部
     {path:'/top',component:top}, 
     //底部
