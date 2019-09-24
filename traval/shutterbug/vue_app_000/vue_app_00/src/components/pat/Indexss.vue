@@ -564,7 +564,9 @@ export default {
            }
         };    
     };
-    // 分页
+      
+  };
+  // 分页  
     .fen{
           display:flex;
         ul{
@@ -578,7 +580,6 @@ export default {
           width:100%;
           height:.5rem;
           padding:.6rem .4rem;
-
             li{
               font-size:.2rem;color:#fff;
               padding:0 .1rem ;
@@ -586,14 +587,12 @@ export default {
               // cursor:pointer;
      
             }
-            .active{
-                background:#aaa;color:#000;}
-              .disabled{/*overflow:hidden;*/opacity:0;}
-              }    
-      }
-    }
-  };
-};   
+            .active{background:#aaa;color:#000;}
+            .disabled{/*overflow:hidden;*/opacity:0;}
+          }    
+      };
+};
+   
 
     // 中屏幕↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 @media screen and (max-width: 1000px) and (min-width: 767px){
@@ -795,5 +794,6 @@ export default {
               .disabled{/*overflow:hidden;*/opacity:0;}
               }    
       };
+};
 };
 </style>
