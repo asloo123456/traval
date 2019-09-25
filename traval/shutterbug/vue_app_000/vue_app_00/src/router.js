@@ -18,7 +18,8 @@ import souFen from "./components/souFen.vue"
 import shopping from "./components/shoppingCart/shopping.vue"
 //商品列表
 import product from  "./components/product/product.vue"
-
+//点击返回到上一个页面
+import back from "./components/back/back.vue"
 
 Vue.use(Router)
 export default new Router({
@@ -37,6 +38,8 @@ export default new Router({
     {path:'/shopping',component:shopping},
     //商品列表
     {path:'/product',component:product},
+    //点击返回到上一个页面
+    {path:'/back',component:back},
     
   ]
 })

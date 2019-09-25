@@ -2,13 +2,12 @@
   <div :class="show?'asideBox':'show'" >
       <div class="header"  >  
         <nav class="naver"  @click="s">
-          <div><img src="../assets/img/登陆注册.svg" alt="">
+          <div><img src="../assets/img/登陆注册.png" alt="">
           <a href="">登陆</a> |<a href="">注册</a>
           </div>
           <button type="button" class="toggle">
             <img class="img" src="../assets/img/x.svg" >
           </button>
-          
         </nav>
         </div>
       <div class="offcanvas">
