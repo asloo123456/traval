@@ -83,7 +83,7 @@
     <div class="tow" v-for="(item,index) of list" :key="index">
       <div class="tows">
         <div class="tow_todo" >
-            <a><img :src="require(`../../assets/${item.img}`)" class="imgtow" /></a>
+            <router-link to="product"><img :src="require(`../../assets/${item.img}`)" class="imgtow" /></router-link>
             <h2 class="text_tow">
               {{item.title}}
             </h2>
@@ -151,6 +151,7 @@ export default {
     }
   },
   created() {
+ 
      this.loadMore();
    },
   methods:{
@@ -161,21 +162,19 @@ export default {
           if(this.pno>1){
             this.pno--;
             window.scroll(0,0);
-            this.loadMore();
           }
           break;
           case "下一页":
           if(this.pno<this.pcount){
             this.pno++;
              window.scroll(0,0);
-             this.loadMore();
           }
           break;
           default:
           this.pno=parseInt(e.target.innerHTML);
-          this.loadMore();
         }
       }
+        this.loadMore();
     },
     loadMore(){
     //功能一:当组件创建成功后获取第一页数据 
@@ -191,6 +190,7 @@ export default {
       //this.list = res.data.data;
       //数组拼接操作 11:30
       this.list =res.data.data;
+         console.log(this.list)
       //赋值
     })
     }

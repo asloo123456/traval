@@ -2,17 +2,18 @@
   <div :class="show?'asideBox':'show'" >
       <div class="header"  >  
         <nav class="naver"  @click="s">
-          <div><img src="../assets/img/登陆注册.png" alt="">
-          <a href="">登陆</a> |<a href="">注册</a>
-          </div>
+          <img src="../assets/img/登陆注册.png" alt="">
+          <a href="">登陆</a><span style="margin:0; font-size:.2rem">|</span><a href="">  注册</a>
+          
           <button type="button" class="toggle">
             <img class="img" src="../assets/img/x.svg" >
           </button>
+          
         </nav>
-        </div>
+      </div>
       <div class="offcanvas">
       <aside>
-        <p class="asideMenu"></p>
+        
         <ul class="asideMenu" >
           <li  v-for="(item,index) in menuList" :key="index" classs="c">
             <div class="oneMenu"   @click="showToggle(item,index)">
@@ -27,7 +28,6 @@
             </ul>
           </li>
         </ul>
-
         
       </aside>
       </div>
@@ -167,9 +167,8 @@ export default {
             overflow: hidden;
   }
   .asideBox{
-    font-weight: 25rem;;
-    font-style: normal;
-  
+    width:3.2rem;
+    height:100%;
     letter-spacing: 0rem;
     margin:0rem; 
     transform: translate3d(320,0,0)!important;
@@ -177,42 +176,47 @@ export default {
             color:#bdbdbd;
             text-decoration: none;
     .header{
-      top:0rem; width:20rem;
-      left:0rem;   
-      .naver{background-color:#232323; border-bottom:0.0525rem solid  #3f3f3f;  height:3.125rem; display:flex;-webkit-box-orient:hoeizontal;  -webkit-box-direction: normal;
+       width:3.2rem;height:.5rem;
+         
+      .naver{background-color:#232323; border-bottom:0.0525rem solid  #3f3f3f;  height:.5rem;width:3rem; display:flex;justify-content:space-around;
           flex-direction: row;
           flex-wrap:wrap;
           -webkit-box-align: center;
           align-items: center;
           -webkit-box-pack:justify;
-          justify-content: space-between;
-          img{margin-left:1rem; margin-bottom:-0.4rem;}
-          a{font-size:1.2rem; font-weight: 500; letter-spacing: -0.0125rem;
+          margin-bottom:.1rem;
+          padding-left:.4rem;
+          img{width:.2rem;height:.2rem}
+          a{font-size:.2rem; font-weight: 500; letter-spacing: -0.0125rem;
           line-height: 0.0625rem;
-           margin-left:0.3rem;
+          //  margin-left:0.3rem;
           color:#fff;    text-decoration: none; }
           }
-          .toggle{opacity: 1; margin-right:1.25rem; transition: opacity 0.2s ease; padding: 0rem; font-size:1.5rem;  line-height: 0.0625rem; cursor: pointer;background:transparent; border:0; opacity: .5; 
-          img{ width:1rem; height:1rem; }
+          .toggle{opacity: 1;  transition: opacity 0.2s ease; padding: 0rem; font-size:1rem;  height:.3rem;line-height: .3rem; cursor: pointer;background:transparent; border:0; opacity: .5; 
+          img{ width:.2rem; height:.2rem;position:absolute;top:.17rem}
           }
     
     } 
     .offcanvas{
         bottom:0;
-       width: 20rem;  left:0rem;
-       margin-top:-2rem;
+       width: 3.2rem;  left:0rem;
+       margin-top:-1rem;
       aside{
+        // display:none;
         background: $menuBackColor;
-        overflow: auto;  
-        padding:2rem;   
+        // display:none;
+        width:3.2rem;
+        padding:.2rem;  
+          margin:0;
         .asideMenu{
           list-style: none;
-           
+          height:6.5rem;
       
           .oneMenu{
-            height: 3.125rem;;
-            line-height: 3.125rem;;
-            border-bottom: 0.0525rem solid #3f3f3f;
+            width:2.5rem;
+            height: .5rem;
+            // line-height: 3.125rem;;
+            border-bottom: 1px solid #3f3f3f;
             display:flex;  -webkit-box-orient:hoeizontal;  -webkit-box-direction: normal;
             flex-direction: row;
             flex-wrap:wrap;
@@ -223,12 +227,15 @@ export default {
             width:100%;
             // &:focus.images{transition:1s rotateY(360deg)}
             a{
+              width:.3rem;height:.5rem;
+              line-height:.5rem;
+              font-size:.1rem;
             color:#bdbdbd;
             text-decoration: none;
             
             &:hover{color:#fff;}  
             }
-            .images{margin:0;width:.9rem;height:.9rem;}
+            .images{margin:0;width:.2rem;height:.2rem;}
             img{
               z-index:9999;
               width: 1.25rem;
@@ -240,23 +247,23 @@ export default {
           }
           ul{
             display:block;
-            padding-bottom:1rem;
-            width:100%;
-            margin-bottom:0;  padding-left:0;  margin-top:0;
-            font-size:0.8rem;
+            padding:0;
+            line-height:.1rem;
               list-style: none;
             color:#bdbdbd;
+            margin-top:.1rem;
            li{
-             margin-top:1rem;
-             .oneMenuChild{
-              text-align:-webkit-match-parent;
-            padding: 0 20px 0 60px;
-            height: 40px;
-            line-height: 40px;
+            width:.5rem;
+            margin:0;
+            height:.3rem;
+            line-height:.3rem;
+            .oneMenuChild{
+            // text-align:-webkit-match-parent;
+            position:absolute;
+            height:.1rem;
+            line-height: .1rem;
             background: $menuBackColor;
-            font-size:0.8rem;
-            border-bottom: 1px solid #3f3f3f;
-            border:0;
+            font-size:0.1rem;
             list-style: none;
             color:#bdbdbd;
             text-decoration: none;
