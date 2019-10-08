@@ -108,7 +108,7 @@ export default {
         loadMore(){
             //功能一：当组件创建成功后获取第一页数据
            // 1：创建url地址
-            var url="product";
+            var url="products";
             //1.1:将当前页码加一
        this.pno++;
       var obj = {pno:this.pno}

@@ -80,10 +80,10 @@
     </div>
 
     <!--楼二图片点的下方-->
-    <div class="tow" v-for="(item,index) of list" :key="index">
+    <div class="tow" v-for="(item,index) of list" :key="index" @scroll="lazyload">
       <div class="tows">
         <div class="tow_todo" >
-            <a><img :src="require(`../../assets/${item.img}`)" class="imgtow" /></a>
+            <router-link to="product"><img :src="iimg" class="imgtow" :data-src="require(`../../assets/${item.img}`)"/></router-link>
             <h2 class="text_tow">
               {{item.title}}
             </h2>
@@ -147,13 +147,35 @@ export default {
     return {
       pcount:3,
       pno:1,
-      list:[]
+      list:[],
+      i:0,
+      iimg:require('../../assets/timg.gif')
     }
   },
   created() {
      this.loadMore();
+    //  this.lazyload(img);
    },
-  methods:{
+  methods:{  
+    lazyload(img){
+      var h = window.innerHeight;
+      var s=document.documentElement.scrollTop||document.body.scrollTop;
+      for(let i=0;i<img.length;i++){
+        // console.log(img[i])
+        if((h+s)>img[i].offsetTop){
+              var temp=new Image();
+              // console.log(tiemp)
+              temp.src=img[i].getAttribute('data-src');
+              // console.log(temp.src)
+              temp.onload=function(){
+              console.log(img[i])
+              setTimeout(()=>{
+              img[i].src=img[i].getAttribute('data-src');
+              },1000)
+              }
+        }
+      }
+    },
     change(e){
       if(e.target.nodeName=="LI"){
         switch(e.target.innerHTML){
@@ -161,21 +183,19 @@ export default {
           if(this.pno>1){
             this.pno--;
             window.scroll(0,0);
-            this.loadMore();
           }
           break;
           case "下一页":
           if(this.pno<this.pcount){
             this.pno++;
              window.scroll(0,0);
-             this.loadMore();
           }
           break;
           default:
           this.pno=parseInt(e.target.innerHTML);
-          this.loadMore();
         }
       }
+        this.loadMore();
     },
     loadMore(){
     //功能一:当组件创建成功后获取第一页数据 
@@ -191,9 +211,29 @@ export default {
       //this.list = res.data.data;
       //数组拼接操作 11:30
       this.list =res.data.data;
+        //  console.log(this.list.length)
       //赋值
     })
     }
+  },
+  mounted(){
+    setTimeout(()=>{
+   
+    // console.log(img)
+    // console.log(img.length)
+    this.$nextTick(function(){
+      // for(var i=0;i<img.length;i++){
+        // console.log(img[i])
+      var img=document.getElementsByClassName("imgtow");
+      window.addEventListener('mousewheel',()=>{
+        this.lazyload(img);
+      })
+      // }
+    })
+    },2000)
+  },
+  updata(){
+     
   },
     props:{
         // img3:{default:""},

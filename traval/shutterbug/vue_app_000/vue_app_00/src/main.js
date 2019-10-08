@@ -41,9 +41,18 @@ import Vuex  from "vuex"
 Vue.use(Vuex)
 //1.11:创建存储对象
 
+//使用vuex定义全局方法
+var store=new Vuex.Store({
+  state:{},
+  mutations:{},
+  getters:{}
+})
+
+
 //1.12:将存储对象添加vue实例作为属性
 new Vue({
   router,
   render: h => h(App),
   // store 
 }).$mount('#app')
+

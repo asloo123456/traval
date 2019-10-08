@@ -68,7 +68,7 @@ export default {
     filters: {
         formatDate(time) {
         var date = new Date(time); 
-        return formatDate(date, 'yyyy年MM月dd日 hh:mm');
+        return formatDate(date, 'yyyy-MM-dd hh:mm');
         }
     },
     data(){
@@ -106,7 +106,7 @@ export default {
             }
         })
         //清空页面信息
-        this.reload() ;
+        this.reload();
         },
     },
     // 加载数据

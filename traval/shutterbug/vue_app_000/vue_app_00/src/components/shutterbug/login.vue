@@ -73,7 +73,7 @@ methods:{
       //服务端:
         //res.write({code:1或0})
       if(result.data.code==1){
-        alert("登录成功！");//this.$router.push("/product")
+        this.$router.push("/product")
       }else{
         alert("用户名或密码不正确!")
       }
