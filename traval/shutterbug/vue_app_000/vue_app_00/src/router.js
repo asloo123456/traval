@@ -5,6 +5,8 @@ import HelloContainer from "./components/HelloWorld.vue"
 
 //引入登入
 import login from "./components/shutterbug/login.vue"
+//引入登入1
+import login1 from "./components/shutterbug/login1.vue"
 
 // 引入中间部分
 import Indexss from "./components/pat/Indexss.vue"
@@ -28,6 +30,7 @@ export default new Router({
     {path:'/',component:HelloContainer},
 
     {path:'/login',component:login},
+    {path:'/login1',component:login1},
     // 中间
     {path:'/Indexss',component:Indexss},
     // 评论
