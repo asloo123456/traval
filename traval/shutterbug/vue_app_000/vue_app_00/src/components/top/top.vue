@@ -154,18 +154,14 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-
-    }
-  },
-  methods: {
-
-  },
 
 }
 </script>
 <style lang="scss" scoped>
+a{
+	color: #fff;
+	text-decoration: none;
+}
 .overflow{
   overflow: hidden;
   height: 32px;
@@ -194,7 +190,6 @@ export default {
       transform: translateY(-32px);
     }
   }
-
 }
 
   // logo a标签

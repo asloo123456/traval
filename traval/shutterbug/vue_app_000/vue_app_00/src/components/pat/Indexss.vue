@@ -83,7 +83,11 @@
     <div class="tow" v-for="(item,index) of list" :key="index" @scroll="lazyload">
       <div class="tows">
         <div class="tow_todo" >
+<<<<<<< HEAD
             <router-link to="product"><img :src="iimg" class="imgtow" :data-src="require(`../../assets/${item.img}`)"/></router-link>
+=======
+            <router-link to="product"><img :src="require(`../../assets/${item.img}`)" class="imgtow" /></router-link>
+>>>>>>> 6979e5d6f5b64d144f1f4498d4a6cf7532dd02d2
             <h2 class="text_tow">
               {{item.title}}
             </h2>
@@ -153,6 +157,7 @@ export default {
     }
   },
   created() {
+ 
      this.loadMore();
     //  this.lazyload(img);
    },
@@ -211,7 +216,11 @@ export default {
       //this.list = res.data.data;
       //数组拼接操作 11:30
       this.list =res.data.data;
+<<<<<<< HEAD
         //  console.log(this.list.length)
+=======
+         console.log(this.list)
+>>>>>>> 6979e5d6f5b64d144f1f4498d4a6cf7532dd02d2
       //赋值
     })
     }

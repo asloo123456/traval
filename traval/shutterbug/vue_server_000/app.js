@@ -62,12 +62,21 @@ server.get("/login",(req,res)=>{
 //http://127.0.0.1:8080/product
 //http://127.0.0.1:8080/product?pno=2
 //http://127.0.0.1:8080/product?pno=3&pageSize=5
+<<<<<<< HEAD
 
 server.get("/product",(req,res)=>{
   // 2:接收客户请求数据   pno页码  pageSize页大小
     var pno=req.query.pno;
     var ps=req.query.pageSize;
 
+=======
+
+server.get("/product",(req,res)=>{
+  // 2:接收客户请求数据   pno页码  pageSize页大小
+    var pno=req.query.pno;
+    var ps=req.query.pageSize;
+
+>>>>>>> 6979e5d6f5b64d144f1f4498d4a6cf7532dd02d2
   // 3：如果客户没有请示数据设置默认数据
   // pno=1  pgeSize=4
       //如果没有说传递第几页，那就传第一页

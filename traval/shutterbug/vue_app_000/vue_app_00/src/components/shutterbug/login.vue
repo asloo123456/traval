@@ -20,7 +20,11 @@
           <bdo>或用第三方账号密码登陆</bdo>
           <span class="sign_line"></span>
         </div><!--  第三方结束 -->
-          <div class="my_image">图片显示区域</div>        
+          <div class="my_image">
+            <a href="#"><img src="../../assets/QQ.png" alt=""></a><!-- QQ图标 -->
+            <a href="#"><img src="../../assets/WX.png" alt=""></a><!-- 微信图标 -->
+            <a href="#"><img src="../../assets/WB.png" alt=""></a><!-- 微博图标 -->
+          </div>        
        </div><!--   登入下方结束    -->
     </div><!--  输入框结束 -->
     <div class="inputShow">
@@ -206,7 +210,19 @@ methods:{
     }
       // 图片显示区域
     .my_image{
-      margin-top:10px;
+      margin-top:20px;
+      display: flex;
+      justify-content: center;
+      a{
+        display: block;
+        width: .5rem;
+        height: .5rem;
+        margin: 0 15px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
   // 底部样式

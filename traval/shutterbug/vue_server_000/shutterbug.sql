@@ -94,7 +94,10 @@ INSERT INTO s_index_product VALUES(NULL,"mcj04.jpeg","佳能秋季新机问答�
 INSERT INTO s_index_product VALUES(NULL,"mcj05.jpg","摄影人的赚钱利器 影像云管家VBox 6全解析","2019年9月5日","义天天","product_details.html?lid=10");
 INSERT INTO s_index_product VALUES(NULL,"mcj06.jpg","摄影人的赚钱利器 影像云管家VBox 6全解析","2019年9月8日","CY3","product_details.html?lid=11");
 INSERT INTO s_index_product VALUES(NULL,"mcj07.jpg","风景旋涡——当代风景摄影展","2019年9月7日","CY3","product_details.html?lid=12");
+<<<<<<< HEAD
 INSERT INTO s_index_product VALUES(NULL,"timg.jpg",NULL,NULL);
+=======
+>>>>>>> 6979e5d6f5b64d144f1f4498d4a6cf7532dd02d2
 /****商品列表****/
 CREATE TABLE s_product_price(
   pid INT PRIMARY KEY AUTO_INCREMENT,
